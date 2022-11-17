@@ -2,6 +2,7 @@ $transition: .3s ease;
 $font-color: #1a1b28;
 $main-color: #0160fe;
 $main-color-rgb: 1 96 254;
+$light-blue: #92bbff;
 
 
 /* mixins */
@@ -51,13 +52,13 @@ input, textarea {
     &:-moz-placeholder, &::-moz-placeholder,
     &::-webkit-input-placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder {
         color: inherit;
-        opacity: 0.5;
-        font-weight: 300;
+        opacity: 0.9;
+        font-weight: 400;
     }
     &::placeholder {
         color: inherit;
-        opacity: 0.5;
-        font-weight: 300;
+        opacity: 0.9;
+        font-weight: 400;
     }
 }
 
@@ -80,15 +81,26 @@ button:hover, button:focus, button:active {cursor: pointer;}
     font-weight: 500;
     border: none;
     border-radius: 4px;
+    transition: $transition;
     &-1 {
         @extend .btn;
         background-color: #fff;
         color: $main-color;
+        &:hover, &:focus, &:active {
+            background-color: #fff;
+            color: $main-color;
+            box-shadow: 0px 2px 20px rgba($color: $main-color, $alpha: .35);
+        }
     }
     &-2 {
         @extend .btn;
         background-color: $main-color;
         color: #fff;
+        &:hover, &:focus, &:active {
+            background-color: $main-color;
+            color: #fff;
+            box-shadow: 0px 2px 20px rgba($color: $main-color, $alpha: .35);
+        }
     }
 }
 
@@ -110,6 +122,12 @@ h2 {
 h3 {
     text-align: left;
     font-size: 2.5em;
+    font-weight: 500;
+    margin-bottom: .5em;
+}
+h4 {
+    text-align: left;
+    font-size: 1.9em;
     font-weight: 500;
     margin-bottom: .5em;
 }
@@ -151,6 +169,7 @@ h6 {
 .main-color {color: $main-color;}
 .light-color {color: rgba($color: $font-color, $alpha: .5);}
 .white {color: #fff;}
+.faded {color: rgba($color: $light-blue, $alpha: .75);}
 
 .bg-white {background-color: #fff;}
 
@@ -299,18 +318,77 @@ main {
     background: url(../imgs/bg/man.png) no-repeat left center $main-color;
     background-size: contain;
     color: #fff;
-    padding: 3em 0;
+    padding: 4em 0;
     form {
         input {color: #fff;}
     }
 }
 
 .sec-base {
+    h2 {font-size: 4em;}
+    .slider-wrap {
+        position: relative;
+    }
     .box {
+        position: relative;
         padding: 3em;
         background-color: #fff;
         border-radius: 1em;
-        box-shadow: 0px 3px 50px rgba($color: $main-color, $alpha: .21);
+        box-shadow: 0px 3px 100px rgba($color: #003b9d, $alpha: .21);
+    }
+}
+.swiper-1 {
+    --w: 1320px;
+    padding: 5em 0;
+    overflow: hidden;
+    .swiper-wrapper {position: unset;}
+    .swiper-slide {
+        position: unset;
+        .img {
+            position: absolute;
+            top: 0px;
+            right: -5%;
+        }
+    }
+    .swiper-button-prev, .swiper-button-next {
+        width: 5em;
+        height: 5em;
+        border-radius: 50%;
+        background-color: rgba($color: #fff, $alpha: .86);
+        color: $main-color;
+        transition: $transition;
+        box-shadow: 0px 1em 2em rgba($color: #6c6c6c, $alpha: .21);
+        &::after {
+            color: $main-color;
+            font-size: 2.5em;
+        }
+        &:hover, &:focus, &:active {
+            box-shadow: 0px 1em 2em rgba($color: $main-color, $alpha: .21);
+        }
+    }
+    .swiper-button-prev{
+        right: calc(50% + var(--w)/2 - 2em);
+        left: unset;
+    }
+    .swiper-button-next{
+        left: calc(50% + var(--w)/2 - 2em);
+        right: unset;
+    }
+    .swiper-pagination {
+        bottom: 1em;
+        &-bullet {
+            border: 2px solid $main-color;
+            background-color: $main-color;
+            width: .6em;
+            height: .6em;
+            opacity: 1 !important;
+            transition: $transition;
+            margin: 0 .75em !important;
+            &-active {
+                background-color: #fff;
+                opacity: 1;
+            }
+        }
     }
 }
 
