@@ -403,6 +403,61 @@ main {
     }
 }
 
+.nav-tabs {
+    justify-content: center;
+    border-bottom: none;
+    .nav-item {
+        position: relative;
+        &:first-child{z-index: 3;}
+        &:nth-child(2){z-index: 2;}
+        &:last-child{z-index: 1;}
+        &:not(:first-child){padding-left: 1em;}
+    }
+    .nav-link {
+        --bg-color: #b4b5b6;
+        background-color: var(--bg-color);
+        color: #fff;
+        position: relative;
+        border: none !important;
+        border-radius: 8px 8px 0px 0px;
+        width: 250px;
+        height: 65px;
+        @include flex-center();
+        padding: 0px;
+        font-weight: 700;
+        filter: drop-shadow(8px 0px 10px rgba(0, 0, 0, 0.15));
+        transition: $transition;
+        &.active {
+            --bg-color: #0160fe;
+            background-color: var(--bg-color);
+            color: #fff;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            right: calc(100% - 1px);
+            border-left: 20px solid transparent;
+            border-bottom: 62px solid var(--bg-color);
+            transition: $transition;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            left: calc(100% - 1px);
+            border-right: 20px solid transparent;
+            border-bottom: 62px solid var(--bg-color);
+            transition: $transition;
+        }
+    }
+}
+.tab-top {
+    background-color: $main-color;
+    color: #fff;
+    padding: 3em 0;
+}
+
 .sec-benefits {
     &-gradient {
         position: relative;
