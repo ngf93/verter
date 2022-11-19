@@ -5,6 +5,26 @@ $accent-color: #0A4AB6;
 $main-color-rgb: 1 96 254;
 $light-blue: #92bbff;
 
+:root {
+    --accent: #0A4AB6;
+    --w: 1320px;
+    @media (max-width: 1399px){
+        --w: 1140px;
+    }
+    @media (max-width: 1199px){
+        --w: 960px;
+    }
+    @media (max-width: 991px){
+        --w: 720px;
+    }
+    @media (max-width: 767px){
+        --w: 540px;
+    }
+    @media (max-width: 575px){
+        --w: 100%;
+    }
+}
+
 
 /* mixins */
 @mixin flex-center {
@@ -22,6 +42,9 @@ $light-blue: #92bbff;
 @mixin box {
     background-color: #fff;
     border-radius: 1em;
+    box-shadow: 0px 3px 100px rgba($color: #003b9d, $alpha: .21);
+}
+@mixin shadow {
     box-shadow: 0px 3px 100px rgba($color: #003b9d, $alpha: .21);
 }
 
@@ -68,6 +91,13 @@ input, textarea {
     }
 }
 
+select {
+    border-radius: 4px;
+    padding: .75em 1em;
+    background-color: #fff;
+    color: $main-color;
+    font-weight: 500;
+}
 
 button {
     background: none;
@@ -132,7 +162,8 @@ button:hover, button:focus, button:active {cursor: pointer;}
 
 
 /* Text styles */
-h1, h2, h3, h4, h5, h6 {line-height: 100%;}
+h1, h2, h3 {line-height: 100%;}
+h4, h5, h6 {line-height: 125%;}
 h1 {
     text-align: left;
     font-size: 3.25em;
@@ -143,7 +174,7 @@ h2 {
     text-align: left;
     font-size: 3.5em;
     font-weight: 700;
-    margin-bottom: .5em;
+    margin-bottom: .75em;
 }
 h3 {
     text-align: left;
@@ -213,22 +244,6 @@ h6 {
 }
 
 .swiper-1 {
-    --w: 1320px;
-    @media (max-width: 1399px){
-        --w: 1140px;
-    }
-    @media (max-width: 1199px){
-        --w: 960px;
-    }
-    @media (max-width: 991px){
-        --w: 720px;
-    }
-    @media (max-width: 767px){
-        --w: 540px;
-    }
-    @media (max-width: 575px){
-        --w: 100%;
-    }
     padding: 5em 0;
     overflow: hidden;
     .swiper-button-prev, .swiper-button-next {
@@ -505,6 +520,34 @@ main {
         line-height: 75%;
         margin-bottom: 0px;
     }
+    input {
+        border: 1px solid #fff;
+        color: #fff;
+        max-width: 250px;
+        padding: .75em 1em;
+        border-radius: 4px;
+    }
+}
+.table-grid {
+    &-row {
+        --td-1: 70px;
+        --td-last: 250px;
+        display: grid;
+        padding: .75em calc((100% - var(--w))/2) .75em 5%;
+        grid-template-columns: var(--td-1) auto var(--td-last) var(--td-last) var(--td-last);
+        grid-template-rows: auto;
+        font-size: .9em;
+        font-weight: 700;
+        &:nth-child(even){background-color: #0052db;}
+        &>div{
+            grid-row: span 1;
+            grid-column: span 1;
+            padding: 0 1em;
+            .bi {
+                font-size: 1.5em;
+            }
+        }
+    }
 }
 .grid-1 {
     display: grid;
@@ -613,6 +656,26 @@ main {
         }
     }
 }
+.case {
+    @include box();
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3em;
+    .img {
+        max-width: 100%;
+        max-height: 300px;
+        object-fit: scale-down;
+        object-position: left top;
+        filter: drop-shadow(0px 1em 1em rgba(108, 108, 108, 0.21));
+    }
+    .logo {
+        max-width: 180px;
+        max-height: 60px;
+        object-fit: scale-down;
+    }
+}
 
 .sec-benefits {
     &-gradient {
@@ -655,11 +718,11 @@ main {
 
 .sec-implemented {
     .swiper-1 {
-        @include box();
-        padding: 3em 0;
-        .img {
-            max-width: 100%;
-            filter: drop-shadow(0px 1em 1em rgba(0, 0, 0, .15));
+        padding: 0px;
+        @include shadow();
+        .case {
+            padding: 3em 0;
+            box-shadow: none;
         }
         .swiper-pagination {
             bottom: 2em;

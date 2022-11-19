@@ -1,3 +1,38 @@
+:root {
+  --accent: #0A4AB6;
+  --w: 1320px;
+}
+
+@media (max-width: 1399px) {
+  :root {
+    --w: 1140px;
+  }
+}
+
+@media (max-width: 1199px) {
+  :root {
+    --w: 960px;
+  }
+}
+
+@media (max-width: 991px) {
+  :root {
+    --w: 720px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --w: 540px;
+  }
+}
+
+@media (max-width: 575px) {
+  :root {
+    --w: 100%;
+  }
+}
+
 /* mixins */
 a, a:hover, a:focus, a:active {
   color: inherit;
@@ -53,6 +88,14 @@ input::placeholder, textarea::placeholder {
   color: inherit;
   opacity: 0.9;
   font-weight: 400;
+}
+
+select {
+  border-radius: 4px;
+  padding: .75em 1em;
+  background-color: #fff;
+  color: #0160fe;
+  font-weight: 500;
 }
 
 button {
@@ -136,8 +179,12 @@ button:hover, button:focus, button:active {
 }
 
 /* Text styles */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   line-height: 100%;
+}
+
+h4, h5, h6 {
+  line-height: 125%;
 }
 
 h1 {
@@ -151,7 +198,7 @@ h2 {
   text-align: left;
   font-size: 3.5em;
   font-weight: 700;
-  margin-bottom: .5em;
+  margin-bottom: .75em;
 }
 
 h3 {
@@ -318,39 +365,8 @@ h6 {
 }
 
 .swiper-1 {
-  --w: 1320px;
   padding: 5em 0;
   overflow: hidden;
-}
-
-@media (max-width: 1399px) {
-  .swiper-1 {
-    --w: 1140px;
-  }
-}
-
-@media (max-width: 1199px) {
-  .swiper-1 {
-    --w: 960px;
-  }
-}
-
-@media (max-width: 991px) {
-  .swiper-1 {
-    --w: 720px;
-  }
-}
-
-@media (max-width: 767px) {
-  .swiper-1 {
-    --w: 540px;
-  }
-}
-
-@media (max-width: 575px) {
-  .swiper-1 {
-    --w: 100%;
-  }
 }
 
 .swiper-1 .swiper-button-prev, .swiper-1 .swiper-button-next {
@@ -718,6 +734,42 @@ main {
   margin-bottom: 0px;
 }
 
+.tab-top input {
+  border: 1px solid #fff;
+  color: #fff;
+  max-width: 250px;
+  padding: .75em 1em;
+  border-radius: 4px;
+}
+
+.table-grid-row {
+  --td-1: 70px;
+  --td-last: 250px;
+  display: -ms-grid;
+  display: grid;
+  padding: 0.75em calc((100% - var(--w))/2) 0.75em 5%;
+  -ms-grid-columns: var(--td-1) auto var(--td-last) var(--td-last) var(--td-last);
+      grid-template-columns: var(--td-1) auto var(--td-last) var(--td-last) var(--td-last);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  font-size: .9em;
+  font-weight: 700;
+}
+
+.table-grid-row:nth-child(even) {
+  background-color: #0052db;
+}
+
+.table-grid-row > div {
+  grid-row: span 1;
+  grid-column: span 1;
+  padding: 0 1em;
+}
+
+.table-grid-row > div .bi {
+  font-size: 1.5em;
+}
+
 .grid-1 {
   display: -ms-grid;
   display: grid;
@@ -883,6 +935,43 @@ main {
   content: '8.';
 }
 
+.case {
+  background-color: #fff;
+  border-radius: 1em;
+  -webkit-box-shadow: 0px 3px 100px rgba(0, 59, 157, 0.21);
+          box-shadow: 0px 3px 100px rgba(0, 59, 157, 0.21);
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3em;
+}
+
+.case .img {
+  max-width: 100%;
+  max-height: 300px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  -o-object-position: left top;
+     object-position: left top;
+  -webkit-filter: drop-shadow(0px 1em 1em rgba(108, 108, 108, 0.21));
+          filter: drop-shadow(0px 1em 1em rgba(108, 108, 108, 0.21));
+}
+
+.case .logo {
+  max-width: 180px;
+  max-height: 60px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
 .sec-benefits-gradient {
   position: relative;
   min-height: 18vw;
@@ -934,17 +1023,15 @@ main {
 }
 
 .sec-implemented .swiper-1 {
-  background-color: #fff;
-  border-radius: 1em;
+  padding: 0px;
   -webkit-box-shadow: 0px 3px 100px rgba(0, 59, 157, 0.21);
           box-shadow: 0px 3px 100px rgba(0, 59, 157, 0.21);
-  padding: 3em 0;
 }
 
-.sec-implemented .swiper-1 .img {
-  max-width: 100%;
-  -webkit-filter: drop-shadow(0px 1em 1em rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0px 1em 1em rgba(0, 0, 0, 0.15));
+.sec-implemented .swiper-1 .case {
+  padding: 3em 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .sec-implemented .swiper-1 .swiper-pagination {
