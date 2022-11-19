@@ -552,7 +552,7 @@
                         <div class="table-grid-row">
                             <div></div>
                             <div></div>
-                            <div>
+                            <div class="hover-effect">
                                 <h5 class="fw-7">Стандарт</h5>
                                 <p class="fw-4 mb-2">Для эффективной работы небольших компаний</p>
                                 <div class="fs-12 fw-7 mb-2">5 ТСД</div>
@@ -561,7 +561,7 @@
                                 <button type="button" class="btn-1 w-100 mt-3">купить</button>
                                 <button type="button" class="btn-3 w-100 mt-3">бесплатно</button>
                             </div>
-                            <div>
+                            <div class="hover-effect">
                                 <h5 class="fw-7">Профи</h5>
                                 <p class="fw-4 mb-2">Для эффективной работы небольших компаний</p>
                                 <div class="fs-12 fw-7 mb-2">5 ТСД</div>
@@ -570,7 +570,7 @@
                                 <button type="button" class="btn-1 w-100 mt-3">купить</button>
                                 <button type="button" class="btn-3 w-100 mt-3">бесплатно</button>
                             </div>
-                            <div>
+                            <div class="hover-effect">
                                 <h5 class="fw-7">Корп</h5>
                                 <p class="fw-4 mb-2">Для эффективной работы небольших компаний</p>
                                 <div class="fs-12 fw-7 mb-2">5 ТСД</div>
@@ -580,47 +580,176 @@
                                 <button type="button" class="btn-3 w-100 mt-3">бесплатно</button>
                             </div>
                         </div>
+
                         <div class="table-grid-row">
                             <div>1</div>
-                            <div>Работа с ТСД</div>
-                            <div><i class="bi bi-check-lg"></i></div>
-                            <div><i class="bi bi-check-lg"></i></div>
-                            <div><i class="bi bi-check-lg"></i></div>
+                            <div>
+                                <button type="button" id="list-1" class="more" onclick="toggleList(this)"></button>
+                                <span>Работа с ТСД</span>
+                            </div>
+                            <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                            <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                            <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
                         </div>
+
+                            <div class="table-grid-row list-1" data-level="2">
+                                <div>1.1</div>
+                                <div>
+                                    <button type="button" id="list-1-1" class="more" onclick="toggleList(this)"></button>
+                                    <span>Управление топологией склада</span>
+                                </div>
+                                <div class="hover-effect"></div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                            </div>
+                                <div class="table-grid-row list-1-1" data-level="3">
+                                    <div>1.1.1</div>
+                                    <div>
+                                        <span>Хранение информации о структуре склада (зоны, стеллажи, ячейки)</span>
+                                    </div>
+                                    <div class="hover-effect"></div>
+                                    <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                    <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                </div>
+                                <div class="table-grid-row list-1-1" data-level="3">
+                                    <div>1.1.2</div>
+                                    <div>
+                                        <span>Учет мультиячеек (когда в одной ячейке может находится товар с разных складов)</span>
+                                    </div>
+                                    <div class="hover-effect"></div>
+                                    <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                    <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                </div>
+                                <div class="table-grid-row list-1-1" data-level="3">
+                                    <div>1.1.3</div>
+                                    <div>
+                                        <span>Присвоение адресов и генерация штрихкодов </span>
+                                    </div>
+                                    <div class="hover-effect"></div>
+                                    <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                    <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                </div>
+                                <div class="table-grid-row list-1-1" data-level="3">
+                                    <div>1.1.4</div>
+                                    <div>
+                                        <span>Печать этикеток со штрихкодом ячейки</span>
+                                    </div>
+                                    <div class="hover-effect"></div>
+                                    <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                    <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                </div>
+
+                            <div class="table-grid-row list-1" data-level="2">
+                                <div>1.2</div>
+                                <div>
+                                    <span>Инвентаризация товара</span>
+                                </div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                            </div>
+                            <div class="table-grid-row list-1" data-level="2">
+                                <div>1.3</div>
+                                <div>
+                                    <span>Приёмка товара</span>
+                                </div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                            </div>
+                            <div class="table-grid-row list-1" data-level="2">
+                                <div>1.4</div>
+                                <div>
+                                    <span>Размещение в зоне хранения</span>
+                                </div>
+                                <div class="hover-effect"></div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                            </div>
+                            <div class="table-grid-row list-1" data-level="2">
+                                <div>1.5</div>
+                                <div>
+                                    <span>Комплектация заказа</span>
+                                </div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                            </div>
+                            <div class="table-grid-row list-1" data-level="2">
+                                <div>1.6</div>
+                                <div>
+                                    <span>Отгрузка</span>
+                                </div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                            </div>
+                            <div class="table-grid-row list-1" data-level="2">
+                                <div>1.7</div>
+                                <div>
+                                    <span>Перемещение товара между ячейками</span>
+                                </div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                            </div>
+                            
                         <div class="table-grid-row">
                             <div>2</div>
-                            <div>WMS</div>
-                            <div><i class="bi bi-check-lg"></i></div>
-                            <div><i class="bi bi-check-lg"></i></div>
-                            <div><i class="bi bi-check-lg"></i></div>
+                            <div>
+                                <button type="button" id="list-2" class="more" onclick="toggleList(this)"></button>
+                                <span>WMS</span>
+                            </div>
+                            <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                            <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                            <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
                         </div>
+                            <div class="table-grid-row list-2" data-level="2">
+                                <div>2.1</div>
+                                <div>
+                                    <span>WMS</span>
+                                </div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                            </div>
+                            <div class="table-grid-row list-2" data-level="2">
+                                <div>2.2</div>
+                                <div>
+                                    <span>WMS</span>
+                                </div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                                <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                            </div>
+
                         <div class="table-grid-row">
                             <div>3</div>
                             <div>Модуль для 1С</div>
-                            <div><i class="bi bi-check-lg"></i></div>
-                            <div><i class="bi bi-check-lg"></i></div>
-                            <div><i class="bi bi-check-lg"></i></div>
+                            <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                            <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                            <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
                         </div>
                         <div class="table-grid-row">
                             <div>4</div>
                             <div>Центр мониторнга</div>
-                            <div><i class="bi bi-check-lg"></i></div>
-                            <div><i class="bi bi-check-lg"></i></div>
-                            <div><i class="bi bi-check-lg"></i></div>
+                            <div class="hover-effect"></div>
+                            <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
+                            <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
                         </div>
                         <div class="table-grid-row">
                             <div>5</div>
                             <div>Инфомат</div>
-                            <div><i class="bi bi-check-lg"></i></div>
-                            <div><i class="bi bi-check-lg"></i></div>
-                            <div><i class="bi bi-check-lg"></i></div>
+                            <div class="hover-effect"></div>
+                            <div class="hover-effect"></div>
+                            <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
                         </div>
                         <div class="table-grid-row">
                             <div>6</div>
                             <div>Электронная очередь</div>
-                            <div><i class="bi bi-check-lg"></i></div>
-                            <div><i class="bi bi-check-lg"></i></div>
-                            <div><i class="bi bi-check-lg"></i></div>
+                            <div class="hover-effect"></div>
+                            <div class="hover-effect"></div>
+                            <div class="hover-effect"><i class="bi bi-check-lg"></i></div>
                         </div>
                     </div>
                 </section>
