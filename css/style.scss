@@ -384,11 +384,12 @@ header {
             ul {
                 @include flex-center();
                 li {
+                    &:not(:first-child){margin-left: .5em;}
                     a {
                         display: block;
                         font-size: 1em;
                         font-weight: 400;
-                        padding: 0.6em 1.35em;
+                        padding: 0.6em 1.2em;
                         border: 1px solid transparent;
                         border-radius: 2em;
                         cursor: pointer;
@@ -1155,17 +1156,20 @@ main {
 }
 
 .sec-callback {
-    background: url(../imgs/bg/man.png) no-repeat left center $main-color;
-    background-size: contain;
+    background: url(../imgs/bg/man.png) no-repeat $main-color;
+    background-size: auto 95%;
+    background-position: 0% 100%;
     color: #fff;
     padding: 4em 0;
+    @media (max-width: 1399px){
+        background-size: auto 90%;
+    }
     @media (max-width: 1199px){
         padding: 3em 0;
+        background-position: -10% 100%;
     }
     @media (max-width: 991px){
         padding: 2em 0;
-    }
-    @media (max-width: 767px){
         background-image: none;
     }
     form {
@@ -1294,6 +1298,10 @@ footer {
                 &:not(:first-child){margin-top: .8em;}
             }
         }
+    }
+    .icon {
+        width: 1.5em;
+        height: 1.5em;
     }
 }
 

@@ -596,11 +596,15 @@ header .container nav ul {
           align-items: center;
 }
 
+header .container nav ul li:not(:first-child) {
+  margin-left: .5em;
+}
+
 header .container nav ul li a {
   display: block;
   font-size: 1em;
   font-weight: 400;
-  padding: 0.6em 1.35em;
+  padding: 0.6em 1.2em;
   border: 1px solid transparent;
   border-radius: 2em;
   cursor: pointer;
@@ -1843,26 +1847,29 @@ main {
 }
 
 .sec-callback {
-  background: url(../imgs/bg/man.png) no-repeat left center #0160fe;
-  background-size: contain;
+  background: url(../imgs/bg/man.png) no-repeat #0160fe;
+  background-size: auto 95%;
+  background-position: 0% 100%;
   color: #fff;
   padding: 4em 0;
+}
+
+@media (max-width: 1399px) {
+  .sec-callback {
+    background-size: auto 90%;
+  }
 }
 
 @media (max-width: 1199px) {
   .sec-callback {
     padding: 3em 0;
+    background-position: -10% 100%;
   }
 }
 
 @media (max-width: 991px) {
   .sec-callback {
     padding: 2em 0;
-  }
-}
-
-@media (max-width: 767px) {
-  .sec-callback {
     background-image: none;
   }
 }
@@ -2085,6 +2092,11 @@ footer .social img {
 
 footer nav ul li:not(:first-child) {
   margin-top: .8em;
+}
+
+footer .icon {
+  width: 1.5em;
+  height: 1.5em;
 }
 
 #offcanvasMenu nav {
