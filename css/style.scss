@@ -397,7 +397,10 @@ header {
         }
     }
     .burger {
-        width: 40px;
+        @media (min-width: 992px){
+            display: none;
+        }
+        width: 2.5em;
         &:before, &:after, div {
             background: #fff;
             content: "";
@@ -412,7 +415,7 @@ header {
             transform: translateY(12px) rotate(135deg);
         }
         &.close:after {
-            transform: translateY(-12px) rotate(-135deg);
+            transform: translateY(-14px) rotate(-135deg);
         }
         &.close div {
             transform: scale(0);
@@ -1273,17 +1276,13 @@ footer {
             flex-wrap: wrap;
             justify-content: center;
             @media (max-width: 575px){
-                flex-direction: column;
-                align-items: center;
+                font-size: 12px;
             }
             &>div {
                 width: 33%;
                 margin-bottom: 2em;
                 @media (max-width: 767px){
                     width: 50%;
-                }
-                @media (max-width: 575px){
-                    width: fit-content;
                 }
             }
         }
@@ -1317,8 +1316,14 @@ footer {
     @media (max-width: 991px){
         justify-content: flex-start;
     }
-    img {width: 1.8em;}
+    img {
+        width: 1.8em;
+        @media (max-width: 991px){
+            width: 3em;
+        }
+    }
 }
+
 
 #offcanvasMenu {
     background-color: rgba($color: $main-color, $alpha: .8);
@@ -1342,9 +1347,5 @@ footer {
                 }
             }
         }
-    }
-    .social {
-        justify-content: center;
-        img {width: 3em;}
     }
 }

@@ -599,7 +599,13 @@ header .container nav ul li a:hover, header .container nav ul li a:focus, header
 }
 
 header .burger {
-  width: 40px;
+  width: 2.5em;
+}
+
+@media (min-width: 992px) {
+  header .burger {
+    display: none;
+  }
 }
 
 header .burger:before, header .burger:after, header .burger div {
@@ -620,8 +626,8 @@ header .burger.close:before {
 }
 
 header .burger.close:after {
-  -webkit-transform: translateY(-12px) rotate(-135deg);
-          transform: translateY(-12px) rotate(-135deg);
+  -webkit-transform: translateY(-14px) rotate(-135deg);
+          transform: translateY(-14px) rotate(-135deg);
 }
 
 header .burger.close div {
@@ -2027,13 +2033,7 @@ footer .f-menu {
 
 @media (max-width: 991px) and (max-width: 575px) {
   footer .f-menu {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    font-size: 12px;
   }
 }
 
@@ -2047,14 +2047,6 @@ footer .f-menu {
 @media (max-width: 991px) and (max-width: 767px) {
   footer .f-menu > div {
     width: 50%;
-  }
-}
-
-@media (max-width: 991px) and (max-width: 575px) {
-  footer .f-menu > div {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
   }
 }
 
@@ -2111,6 +2103,12 @@ footer .icon {
   width: 1.8em;
 }
 
+@media (max-width: 991px) {
+  .social img {
+    width: 3em;
+  }
+}
+
 #offcanvasMenu {
   background-color: rgba(1, 96, 254, 0.8);
   color: #fff;
@@ -2147,15 +2145,5 @@ footer .icon {
 #offcanvasMenu nav ul li a {
   font-size: 2em;
   font-weight: 300;
-}
-
-#offcanvasMenu .social {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#offcanvasMenu .social img {
-  width: 3em;
 }
 /*# sourceMappingURL=style.css.map */
