@@ -8,20 +8,25 @@ $light-blue: #92bbff;
 :root {
     --accent: #0A4AB6;
     --w: 1320px;
+    --h-height: 180px;
     @media (max-width: 1399px){
         --w: 1140px;
     }
     @media (max-width: 1199px){
         --w: 960px;
+        --h-height: 150px;
     }
     @media (max-width: 991px){
         --w: 720px;
+        --h-height: 120px;
     }
     @media (max-width: 767px){
         --w: 540px;
+        --h-height: 90px;
     }
     @media (max-width: 575px){
         --w: 100%;
+        --h-height: 60px;
     }
 }
 
@@ -356,20 +361,8 @@ header {
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 180px;
-    z-index: 10;
-    @media (max-width: 1199px){
-        height: 150px;
-    }
-    @media (max-width: 991px){
-        height: 120px;
-    }
-    @media (max-width: 767px){
-        height: 90px;
-    }
-    @media (max-width: 575px){
-        height: 60px;
-    }
+    height: var(--h-height);
+    z-index: 1100;
     &.inner {
         color: #fff;
     }
@@ -401,6 +394,28 @@ header {
                     }
                 }
             }
+        }
+    }
+    .burger {
+        width: 40px;
+        &:before, &:after, div {
+            background: #fff;
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            border-radius: 3px;
+            margin: 10px 0;
+            transition: all $transition;
+        }
+        &.close:before {
+            transform: translateY(12px) rotate(135deg);
+        }
+        &.close:after {
+            transform: translateY(-12px) rotate(-135deg);
+        }
+        &.close div {
+            transform: scale(0);
         }
     }
 }
@@ -1282,13 +1297,6 @@ footer {
             height: 30px;
         }
     }
-    .social {
-        @include flex-center();
-        @media (max-width: 991px){
-            justify-content: flex-start;
-        }
-        img {width: 1.8em;}
-    }
     nav {
         @media (max-width: 1199px){
             font-size: .9em;
@@ -1304,13 +1312,39 @@ footer {
         height: 1.5em;
     }
 }
-
+.social {
+    @include flex-center();
+    @media (max-width: 991px){
+        justify-content: flex-start;
+    }
+    img {width: 1.8em;}
+}
 
 #offcanvasMenu {
+    background-color: rgba($color: $main-color, $alpha: .8);
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    .offcanvas-body {
+        padding-top: var(--h-height);
+        padding-bottom: var(--h-height);
+        @include flex-center();
+        flex-direction: column;
+    }
     nav {
-        font-size: 1.2em;
         ul {
-            li:not(:first-child){margin-top: 1em;}
+            text-align: center;
+            li {
+                &:not(:first-child){margin-top: 1em;}
+                a {
+                    font-size: 2em;
+                    font-weight: 300;
+                }
+            }
         }
+    }
+    .social {
+        justify-content: center;
+        img {width: 3em;}
     }
 }

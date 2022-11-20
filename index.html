@@ -17,7 +17,7 @@
         <div class="container h-100">
             <div class="row justify-content-center h-100">
                 <div class="col-12 col-xl-10 d-flex align-items-center justify-content-between">
-                    <a href="/"><img src="imgs/logo.svg" alt="Verter" class="logo"></a>
+                    <a href="/"><img src="imgs/logo-white.svg" alt="Verter" class="logo"></a>
                     <nav class="d-none d-lg-block">
                         <ul class="list-unstyled">
                             <li>
@@ -38,8 +38,8 @@
                         </ul>
                     </nav>
                     <a href="tel:+74950184105" class="d-none d-lg-block fw-5">+7 495 018 41 05</a>
-                    <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" class="fs-20 d-flex d-lg-none">
-                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    <button type="button" class="burger" onclick="openMenu(this)">
+                        <div></div>
                     </button>
                 </div>
             </div>
@@ -1240,13 +1240,8 @@
         </div>
     </footer>
 
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
-        <div class="offcanvas-header">
-            <h3 class="offcanvas-title main-color">Меню</h3>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
         <div class="offcanvas-body">
-            <a href="tel:+74950184105" class="d-block fs-14 fw-5 mb-4">+7 495 018 41 05</a>
             <nav>
                 <ul class="list-unstyled">
                     <li>
@@ -1266,6 +1261,13 @@
                     </li>
                 </ul>
             </nav>
+            <a href="tel:+74950184105" class="d-block fs-12 fw-5 mt-5 text-center">+7 495 018 41 05</a>
+            <div class="fs-09 fw-3 mt-5 mb-2">Verter в соцсетях:</div>
+            <div class="social">
+                <a href="" class="ms-lg-3"><img src="imgs/icons/dzen-white.svg" alt="dzen"></a>
+                <a href="" class="ms-3"><img src="imgs/icons/telegram-white.svg" alt="telegram"></a>
+                <a href="" class="ms-3"><img src="imgs/icons/vk-white.svg" alt="vk"></a>
+            </div>
         </div>
     </div>
 

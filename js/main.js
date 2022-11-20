@@ -49,6 +49,19 @@ if (hoverDivs){
 }
 
 
+const mobileMenu = document.getElementById('offcanvasMenu')
+const bsMenu = new bootstrap.Offcanvas(mobileMenu)
+function openMenu(btn) {
+  bsMenu.toggle()
+  mobileMenu.addEventListener('shown.bs.offcanvas', function () {
+    btn.classList.add('close')
+  })
+  mobileMenu.addEventListener('hidden.bs.offcanvas', function () {
+    btn.classList.remove('close')
+  })
+}
+
+
 const swiper = new Swiper('.swiper-1', {
     loop: true,
     effect: 'fade',
