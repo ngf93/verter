@@ -16,9 +16,9 @@
     <header class="inner">
         <div class="container h-100">
             <div class="row justify-content-center h-100">
-                <div class="col-10 d-flex align-items-center justify-content-between">
+                <div class="col-12 col-xl-10 d-flex align-items-center justify-content-between">
                     <a href="/"><img src="imgs/logo.svg" alt="Verter" class="logo"></a>
-                    <nav>
+                    <nav class="d-none d-lg-block">
                         <ul class="list-unstyled">
                             <li>
                                 <a href="/" class="active">Продукты</a>
@@ -37,24 +37,28 @@
                             </li>
                         </ul>
                     </nav>
-                    <a href="tel:+74950184105" class="fw-5">+7 495 018 41 05</a>
+                    <a href="tel:+74950184105" class="d-none d-lg-block fw-5">+7 495 018 41 05</a>
+                    <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" class="fs-20 d-flex d-lg-none">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    </button>
                 </div>
             </div>
         </div>
     </header>
+
     <main>
         <section class="sec-product-main">
             <img src="imgs/bg/bg-1.jpg" alt="Продукт" class="bg">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-10">
+                    <div class="col-12 col-xl-10">
                         <h1 class="mb-0">Для управления и оптимизации процессов оптовых складов</h1>
                     </div>
-                    <div class="col-11">
+                    <div class="col-12 col-xl-11">
                         <div class="box">
                             <h2>Verter.Склад</h2>
-                            <p class="fs-15">Мобильная автоматизации упрощает работу сотрудников склада и устраняет ошибки при приёмке, отгрузке и инвентаризации товара</p>
-                            <button type="button" class="btn-1 fs-09 mt-5">подробнее</button>
+                            <p>Мобильная автоматизации упрощает работу сотрудников склада и устраняет ошибки при приёмке, отгрузке и инвентаризации товара</p>
+                            <button type="button" class="btn-1 fs-09 mt-3 mt-sm-5">подробнее</button>
                         </div>
                     </div>
                 </div>
@@ -62,13 +66,13 @@
         </section>
 
         <section class="sec-products mb-8 container">
-            <ul class="list-unstyled row g-5">
+            <ul class="list-unstyled row g-4 g-xl-5">
                 <li class="col-12">
                     <figure class="light">
                         <img src="imgs/product/img1.png" alt="WMS + ТСД">
                         <figcaption>
                             <div class="row">
-                                <div class="col-5">
+                                <div class="col-sm-9 col-md-5">
                                     <h2>WMS + ТСД</h2>
                                     <p>Мобильное приложение терминалов сбора данных, позволяющая кладовщику быть мобильным и всегда на связи</p>
                                 </div>
@@ -77,7 +81,7 @@
                         </figcaption>
                     </figure>
                 </li>
-                <li class="col-6">
+                <li class="col-12 col-md-6">
                     <figure class="dark">
                         <img src="imgs/product/img2.png" alt="Центр мониторинга">
                         <figcaption>
@@ -91,7 +95,7 @@
                         </figcaption>
                     </figure>
                 </li>
-                <li class="col-6">
+                <li class="col-12 col-md-6">
                     <figure class="light">
                         <img src="imgs/product/img3.png" alt="Инфомат">
                         <figcaption>
@@ -105,12 +109,12 @@
                         </figcaption>
                     </figure>
                 </li>
-                <li class="col-sm-12">
+                <li class="col-12">
                     <figure class="dark">
                         <img src="imgs/product/img4.png" alt="Маркировка">
                         <figcaption>
                             <div class="row">
-                                <div class="col-5">
+                                <div class="col-sm-9 col-md-5">
                                     <h2>Маркировка</h2>
                                     <p>Система для учета маркированного товара в т.ч. по требованиям Честного Знака</p>
                                 </div>
@@ -119,12 +123,12 @@
                         </figcaption>
                     </figure>
                 </li>
-                <li class="col-6">
+                <li class="col-12 col-md-6">
                     <figure class="light">
                         <img src="imgs/product/img5.png" alt="Электронная очередь">
                         <figcaption>
                             <div class="row">
-                                <div class="col-8">
+                                <div class="col-sm-10 col-md-8">
                                     <h2>Электронная очередь</h2>
                                     <p>Система для управления очередью заказов на приемку, комплектацию, отгрузку</p>
                                 </div>
@@ -133,12 +137,12 @@
                         </figcaption>
                     </figure>
                 </li>
-                <li class="col-6">
+                <li class="col-12 col-md-6">
                     <figure class="dark">
                         <img src="imgs/product/img6.png" alt="Модуль для 1С">
                         <figcaption>
                             <div class="row">
-                                <div class="col-9">
+                                <div class="col-12 col-xl-9">
                                     <h2>Модуль для 1С</h2>
                                     <p>Специализированные АРМ-ы для управления и распределения складских операций между кладовщиками</p>
                                 </div>
@@ -151,58 +155,58 @@
         </section>
 
         <section class="sec-scope mb-8 container">
-            <div class="row justify-content-center">
-                <div class="col-10">
+            <li class="row justify-content-center">
+                <div class="col-12 col-lg-11 col-xl-10">
                     <h2>Области применения</h2>
                 </div>
-                <div class="col-9">
+                <div class="col-12 col-md-11 col-lg-10 col-xl-9">
                     <div class="row mb-5">
-                        <div class="col-10">
+                        <div class="col-12 col-lg-10">
                             <p class="fs-14">Программное обеспечение <strong class="main-color">Verter.Склад</strong> применяется для учёта различных групп товаров и позволяет адаптировать ПО под любые сферы бизнеса</p>
                         </div>
                     </div>
-                    <div class="row row-cols-5 g-5">
-                        <div>
+                    <ul class="list-unstyled row row-cols-3 row-cols-sm-4 row-cols-lg-5 g-4 g-xl-5 justify-content-center">
+                        <li>
                             <img src="imgs/icons/clothes.png" alt="Одежда" class="icon">
                             <p class="text-center lh-12 mt-3">Одежда</p>
-                        </div>
-                        <div>
+                        </li>
+                        <li>
                             <img src="imgs/icons/shoes.png" alt="Обувь" class="icon">
                             <p class="text-center lh-12 mt-3">Обувь</p>
-                        </div>
-                        <div>
+                        </li>
+                        <li>
                             <img src="imgs/icons/Инструменты.png" alt="Инструменты" class="icon">
                             <p class="text-center lh-12 mt-3">Инструменты</p>
-                        </div>
-                        <div>
+                        </li>
+                        <li>
                             <img src="imgs/icons/Металлопродукция.png" alt="Металлопродукция" class="icon">
                             <p class="text-center lh-12 mt-3">Металло продукция</p>
-                        </div>
-                        <div>
+                        </li>
+                        <li>
                             <img src="imgs/icons/РТИ.png" alt="РТИ" class="icon">
                             <p class="text-center lh-12 mt-3">РТИ</p>
-                        </div>
-                        <div>
+                        </li>
+                        <li>
                             <img src="imgs/icons/Электроника.png" alt="Электроника" class="icon">
                             <p class="text-center lh-12 mt-3">Электроника</p>
-                        </div>
-                        <div>
+                        </li>
+                        <li>
                             <img src="imgs/icons/Стройматериалы.png" alt="Стройматериалы" class="icon">
                             <p class="text-center lh-12 mt-3">Стройматериалы</p>
-                        </div>
-                        <div>
+                        </li>
+                        <li>
                             <img src="imgs/icons/Ткань.png" alt="Ткань и фурнитура" class="icon">
                             <p class="text-center lh-12 mt-3">Ткань и фурнитура</p>
-                        </div>
-                        <div>
+                        </li>
+                        <li>
                             <img src="imgs/icons/Продукты.png" alt="Продукты питания" class="icon">
                             <p class="text-center lh-12 mt-3">Продукты питания</p>
-                        </div>
-                        <div>
+                        </li>
+                        <li>
                             <img src="imgs/icons/medications.png" alt="Лекарства" class="icon">
                             <p class="text-center lh-12 mt-3">Лекарства</p>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -224,11 +228,11 @@
                 <section class="tab-top">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-10">
+                            <div class="col-12 col-xl-10">
                                 <h2>Возможности продукта</h2>
                             </div>
-                            <div class="col-11">
-                                <ul class="list-unstyled d-flex flex-wrap fs-12">
+                            <div class="col-12 col-xl-11">
+                                <ul class="list-unstyled d-flex flex-wrap">
                                     <li><button type="button" class="btn-4 active">Адресный склад</button></li>
                                     <li><button type="button" class="btn-4">Приёмка товара</button></li>
                                     <li><button type="button" class="btn-4">Комплектация заказа</button></li>
@@ -301,13 +305,13 @@
                 </section>
                 
                 <section class="sec-benefits mt-5 mb-8">
-                    <div class="container mb-5">
+                    <div class="container mb-4 mb-sm-5">
                         <div class="row gy-4 justify-content-center">
-                            <div class="col-10">
+                            <div class="col-12 col-lg-10">
                                 <h3>Компании, с внедренной адресной складской системой хранения товара, имеют весомое преимущество перед конкурентами.</h3>
                             </div>
-                            <div class="col-10">
-                                <p class="fs-15 ps-5">Все изделия промаркированы, записаны и учтены в программе. Это существенно повышает прибыль и производительность предприятия. И чем крупнее компания, тем выгоднее подобная оптимизация. </p>
+                            <div class="col-12 col-lg-10">
+                                <p class="fs-15 ps-md-5">Все изделия промаркированы, записаны и учтены в программе. Это существенно повышает прибыль и производительность предприятия. И чем крупнее компания, тем выгоднее подобная оптимизация. </p>
                             </div>
                         </div>
                     </div>
@@ -316,7 +320,7 @@
                         <img src="imgs/bg/benefits.png" alt="Плюсы внедрения адресного склада">
                         <div class="container">
                             <div class="row justify-content-center align-items-end">
-                                <div class="col-10">
+                                <div class="col-12 col-lg-10">
                                     <h2 class="mb-0">Плюсы
                                         <br/>внедрения
                                         <br/>адресного
@@ -326,10 +330,10 @@
                         </div>
                     </div>
         
-                    <div class="container mt-5">
+                    <div class="container mt-4 mt-sm-5">
                         <div class="row justify-content-center">
-                            <div class="col-9">
-                                <ul class="list-unstyled fs-14">
+                            <div class="col-12 col-lg-9">
+                                <ul class="list-unstyled">
                                     <li>Точная информация о местоположении товара и его остатках</li>
                                     <li>Сокращение времени на проведение складских операций</li>
                                     <li>Снижение количества ошибок при сборе заказа</li>
@@ -344,7 +348,7 @@
 
                 <section class="sec-implemented container mb-8">
                     <div class="row justify-content-center">
-                        <div class="col-10">
+                        <div class="col-12 col-lg-10">
                             <h2>Уже внедрено</h2>
                         </div>
                         <div class="position-relative">
@@ -352,28 +356,28 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="case">
-                                            <div class="row justify-content-center">
-                                                <div class="col-10">
-                                                    <div class="row justify-content-between">
+                                            <div class="h-100 row justify-content-center">
+                                                <div class="col-lg-10 d-flex flex-column justify-content-between">
+                                                    <div class="row justify-content-between mb-3">
                                                         <div class="col-3">
                                                             <img src="imgs/img-2.png" alt="Автоматизация агрегации кодов на фабриках" class="img">
                                                         </div>
-                                                        <div class="col-8">
+                                                        <div class="col-9 col-lg-8">
                                                             <h5>Автоматизация агрегации кодов на фабриках</h5>
                                                             <p>В срок всего 2 месяца нами был реализован проект по маркировке одежды уникальными кодами при помощи ТСД. Это привело к ускорению приема и отгрузки на 40%, а также исключению ошибок при работе с маркированным товаром.</p>
-                                                            <div class="d-flex mt-4">
+                                                            <div class="d-sm-flex mt-2 mt-md-4">
                                                                 <div>
-                                                                    <div class="fs-25 fw-7 main-color">2 месяца</div>
+                                                                    <div class="accent">2 месяца</div>
                                                                     <p>Реализация работы</p>
                                                                 </div>
-                                                                <div class="ms-5 ps-5">
-                                                                    <div class="fs-25 fw-7 main-color">>40%</div>
+                                                                <div class="ms-sm-5 ps-md-5">
+                                                                    <div class="accent">>40%</div>
                                                                     <p>Cкорость работы</p>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex align-items-center justify-content-between mt-5">
+                                                    <div class="d-flex align-items-center justify-content-between">
                                                         <div>
                                                             <img src="imgs/img-1.png" alt="техноавиа" class="logo">
                                                         </div>
@@ -387,30 +391,30 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="case">
-                                            <div class="row justify-content-center">
-                                                <div class="col-10">
-                                                    <div class="row justify-content-between">
+                                            <div class="h-100 row justify-content-center">
+                                                <div class="col-lg-10 d-flex flex-column justify-content-between">
+                                                    <div class="row justify-content-between mb-3">
                                                         <div class="col-3">
                                                             <img src="imgs/img-2.png" alt="Запуск и внедрение ERP" class="img">
                                                         </div>
-                                                        <div class="col-8">
+                                                        <div class="col-9 col-lg-8">
                                                             <h5>Запуск и внедрение ERP</h5>
                                                             <p>В срок всего 2 месяца нами был реализован проект по маркировке одежды уникальными кодами при помощи ТСД. Это привело к ускорению приема и отгрузки на 40%, а также исключению ошибок при работе с маркированным товаром.</p>
-                                                            <div class="d-flex mt-4">
+                                                            <div class="d-sm-flex mt-2 mt-md-4">
                                                                 <div>
-                                                                    <div class="fs-25 fw-7 main-color">2 месяца</div>
+                                                                    <div class="accent">2 месяца</div>
                                                                     <p>Реализация работы</p>
                                                                 </div>
-                                                                <div class="ms-5 ps-5">
-                                                                    <div class="fs-25 fw-7 main-color">>40%</div>
+                                                                <div class="ms-sm-5 ps-md-5">
+                                                                    <div class="accent">>40%</div>
                                                                     <p>Cкорость работы</p>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex align-items-center justify-content-between mt-5">
+                                                    <div class="d-flex align-items-center justify-content-between">
                                                         <div>
-                                                            <img src="imgs/img-2.png" alt="romer" class="logo">
+                                                            <img src="imgs/img-3.png" alt="romer" class="logo">
                                                         </div>
                                                         <div>
                                                             <a href="" class="fw-5 fs-09 text-decoration-underline">подробнее</a>
@@ -422,28 +426,28 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="case">
-                                            <div class="row justify-content-center">
-                                                <div class="col-10">
-                                                    <div class="row justify-content-between">
+                                            <div class="h-100 row justify-content-center">
+                                                <div class="col-lg-10 d-flex flex-column justify-content-between">
+                                                    <div class="row justify-content-between mb-3">
                                                         <div class="col-3">
                                                             <img src="imgs/img-2.png" alt="Автоматизация агрегации кодов на фабриках" class="img">
                                                         </div>
-                                                        <div class="col-8">
+                                                        <div class="col-9 col-lg-8">
                                                             <h5>Автоматизация агрегации кодов на фабриках</h5>
                                                             <p>В срок всего 2 месяца нами был реализован проект по маркировке одежды уникальными кодами при помощи ТСД. Это привело к ускорению приема и отгрузки на 40%, а также исключению ошибок при работе с маркированным товаром.</p>
-                                                            <div class="d-flex mt-4">
+                                                            <div class="d-sm-flex mt-2 mt-md-4">
                                                                 <div>
-                                                                    <div class="fs-25 fw-7 main-color">2 месяца</div>
+                                                                    <div class="accent">2 месяца</div>
                                                                     <p>Реализация работы</p>
                                                                 </div>
-                                                                <div class="ms-5 ps-5">
-                                                                    <div class="fs-25 fw-7 main-color">>40%</div>
+                                                                <div class="ms-sm-5 ps-md-5">
+                                                                    <div class="accent">>40%</div>
                                                                     <p>Cкорость работы</p>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex align-items-center justify-content-between mt-5">
+                                                    <div class="d-flex align-items-center justify-content-between">
                                                         <div>
                                                             <img src="imgs/img-1.png" alt="техноавиа" class="logo">
                                                         </div>
@@ -457,30 +461,30 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="case">
-                                            <div class="row justify-content-center">
-                                                <div class="col-10">
-                                                    <div class="row justify-content-between">
+                                            <div class="h-100 row justify-content-center">
+                                                <div class="col-lg-10 d-flex flex-column justify-content-between">
+                                                    <div class="row justify-content-between mb-3">
                                                         <div class="col-3">
                                                             <img src="imgs/img-2.png" alt="Запуск и внедрение ERP" class="img">
                                                         </div>
-                                                        <div class="col-8">
+                                                        <div class="col-9 col-lg-8">
                                                             <h5>Запуск и внедрение ERP</h5>
                                                             <p>В срок всего 2 месяца нами был реализован проект по маркировке одежды уникальными кодами при помощи ТСД. Это привело к ускорению приема и отгрузки на 40%, а также исключению ошибок при работе с маркированным товаром.</p>
-                                                            <div class="d-flex mt-4">
+                                                            <div class="d-sm-flex mt-2 mt-md-4">
                                                                 <div>
-                                                                    <div class="fs-25 fw-7 main-color">2 месяца</div>
+                                                                    <div class="accent">2 месяца</div>
                                                                     <p>Реализация работы</p>
                                                                 </div>
-                                                                <div class="ms-5 ps-5">
-                                                                    <div class="fs-25 fw-7 main-color">>40%</div>
+                                                                <div class="ms-sm-5 ps-md-5">
+                                                                    <div class="accent">>40%</div>
                                                                     <p>Cкорость работы</p>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex align-items-center justify-content-between mt-5">
+                                                    <div class="d-flex align-items-center justify-content-between">
                                                         <div>
-                                                            <img src="imgs/img-2.png" alt="romer" class="logo">
+                                                            <img src="imgs/img-3.png" alt="romer" class="logo">
                                                         </div>
                                                         <div>
                                                             <a href="" class="fw-5 fs-09 text-decoration-underline">подробнее</a>
@@ -502,8 +506,8 @@
                 <section class="sec-callback mb-8">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-8">
-                                <div class="row row-cols-2 gx-5">
+                            <div class="col-12 col-lg-10 col-xl-9 col-xxl-8">
+                                <div class="row row-cols-md-2 gx-4 gx-lg-5">
                                     <div>
                                         <h2>Возникли вопросы по адресному складу?</h2>
                                         <p>Наш менеджер свяжется с вами, и расскажет о функционале адресный склад все или о все вариантах и возможностях и интеграции</p>
@@ -529,26 +533,30 @@
                 <section class="tab-top pb-5">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-11">
+                            <div class="col-12 col-xl-11">
                                 <h2 class="mb-4">Тарифы <span class="fw-3">Verter.Склад</span></h2>
                             </div>
-                            <div class="col-10">
+                            <div class="col-12 col-xl-10">
                                 <h5 class="fw-4">Подберите для себя самый оптимальный тариф</h5>
-                                <div class="d-flex align-items-center">
-                                    <span class="fs-12 me-2">Срок действия лицензии:</span>
-                                    <select class="me-5">
-                                        <option value="на 12 месяцев">на 12 месяцев</option>
-                                        <option value="на 3 года">на 3 года</option>
-                                        <option value="безлимитная">безлимитная</option>
-                                    </select>
-                                    <span class="fs-12 me-2">Количество ТСД:</span>
-                                    <input type="number" placeholder="0" class="flex-1">
+                                <div class="d-lg-flex align-items-center">
+                                    <div class="d-flex align-items-center me-lg-5">
+                                        <span class="fs-12 me-2">Срок действия лицензии:</span>
+                                        <select>
+                                            <option value="на 12 месяцев">на 12 месяцев</option>
+                                            <option value="на 3 года">на 3 года</option>
+                                            <option value="безлимитная">безлимитная</option>
+                                        </select>
+                                    </div>
+                                    <div class="d-flex align-items-center mt-3 mt-lg-0">
+                                        <span class="fs-12 me-2">Количество ТСД:</span>
+                                        <input type="number" placeholder="0" class="flex-1">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="table-grid mt-5">
+                    <div class="table-grid mt-4 mt-lg-5">
                         <div class="table-grid-row">
                             <div></div>
                             <div></div>
@@ -760,11 +768,11 @@
                 <section class="tab-top pb-4">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-11">
+                            <div class="col-12 col-xl-11">
                                 <h2>Где внедренно</h2>
                             </div>
-                            <div class="col-11">          
-                                <ul class="list-unstyled d-flex flex-wrap fs-12">
+                            <div class="col-12 col-xl-11">          
+                                <ul class="list-unstyled d-flex flex-wrap">
                                     <li><button type="button" class="btn-4">Адресный склад</button></li>
                                     <li><button type="button" class="btn-4">Приёмка товара</button></li>
                                     <li><button type="button" class="btn-4">Комплектация заказа</button></li>
@@ -782,30 +790,30 @@
                     </div>
                 </section>
 
-                <section class="container mb-5">
-                    <div class="row g-5">
+                <section class="container mb-sm-5">
+                    <div class="row g-4 g-xl-5">
                         <div class="col-12">
                             <div class="case">
-                                <div class="row justify-content-between">
+                                <div class="row justify-content-between mb-3">
                                     <div class="col-3">
                                         <img src="imgs/img-2.png" alt="Автоматизация агрегации кодов на фабриках" class="img">
                                     </div>
-                                    <div class="col-8">
+                                    <div class="col-9 col-lg-8">
                                         <h5>Автоматизация агрегации кодов на фабриках</h5>
                                         <p>В срок всего 2 месяца нами был реализован проект по маркировке одежды уникальными кодами при помощи ТСД. Это привело к ускорению приема и отгрузки на 40%, а также исключению ошибок при работе с маркированным товаром.</p>
-                                        <div class="d-flex mt-4">
+                                        <div class="d-sm-flex mt-2 mt-md-4">
                                             <div>
-                                                <div class="fs-25 fw-7 main-color">2 месяца</div>
+                                                <div class="accent">2 месяца</div>
                                                 <p>Реализация работы</p>
                                             </div>
-                                            <div class="ms-5 ps-5">
-                                                <div class="fs-25 fw-7 main-color">>40%</div>
+                                            <div class="ms-sm-5 ps-md-5">
+                                                <div class="accent">>40%</div>
                                                 <p>Cкорость работы</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-between mt-5">
+                                <div class="d-flex align-items-center justify-content-between">
                                     <div>
                                         <img src="imgs/img-1.png" alt="техноавиа" class="logo">
                                     </div>
@@ -815,13 +823,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-md-6">
                             <div class="case">
-                                <div>
+                                <div class="mb-3">
                                     <h5>Запуск и внедрение ERP</h5>
                                     <p>Компанией в кратчайшие сроки был реализован проект по внедрению системы для управления бизнес-процессами и ресурсами обувной фабрики на основе единой базы данных. ERP создает единую унифицированную систему отчетности для всех процессов. Большая производительность за меньший срок.</p>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-between mt-5">
+                                <div class="d-flex align-items-center justify-content-between">
                                     <div>
                                         <img src="imgs/img-3.png" alt="romer" class="logo">
                                     </div>
@@ -831,13 +839,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-md-6">
                             <div class="case">
-                                <div>
+                                <div class="mb-3">
                                     <h5>Автоматизация агрегации кодов на фабриках</h5>
                                     <p>В срок всего 2 месяца нами был реализован проект по маркировке одежды уникальными кодами при помощи ТСД. Это привело к ускорению приема и отгрузки на 40%, а также исключению ошибок при работе с маркированным товаром.</p>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-between mt-5">
+                                <div class="d-flex align-items-center justify-content-between">
                                     <div>
                                         <img src="imgs/img-1.png" alt="техноавиа" class="logo">
                                     </div>
@@ -849,26 +857,26 @@
                         </div>
                         <div class="col-12">
                             <div class="case">
-                                <div class="row justify-content-between">
+                                <div class="row justify-content-between mb-3">
                                     <div class="col-3">
                                         <img src="imgs/img-2.png" alt="Запуск и внедрение ERP" class="img">
                                     </div>
-                                    <div class="col-8">
+                                    <div class="col-9 col-lg-8">
                                         <h5>Запуск и внедрение ERP</h5>
                                         <p>В срок всего 2 месяца нами был реализован проект по маркировке одежды уникальными кодами при помощи ТСД. Это привело к ускорению приема и отгрузки на 40%, а также исключению ошибок при работе с маркированным товаром.</p>
-                                        <div class="d-flex mt-4">
+                                        <div class="d-sm-flex mt-2 mt-md-4">
                                             <div>
-                                                <div class="fs-25 fw-7 main-color">2 месяца</div>
+                                                <div class="accent">2 месяца</div>
                                                 <p>Реализация работы</p>
                                             </div>
-                                            <div class="ms-5 ps-5">
-                                                <div class="fs-25 fw-7 main-color">>40%</div>
+                                            <div class="ms-sm-5 ps-md-5">
+                                                <div class="accent">>40%</div>
                                                 <p>Cкорость работы</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-between mt-5">
+                                <div class="d-flex align-items-center justify-content-between">
                                     <div>
                                         <img src="imgs/img-3.png" alt="romer" class="logo">
                                     </div>
@@ -878,13 +886,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-md-6">
                             <div class="case">
-                                <div>
+                                <div class="mb-3">
                                     <h5>Автоматизация агрегации кодов на фабриках</h5>
                                     <p>В срок всего 2 месяца нами был реализован проект по маркировке одежды уникальными кодами при помощи ТСД. Это привело к ускорению приема и отгрузки на 40%, а также исключению ошибок при работе с маркированным товаром.</p>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-between mt-5">
+                                <div class="d-flex align-items-center justify-content-between">
                                     <div>
                                         <img src="imgs/img-1.png" alt="техноавиа" class="logo">
                                     </div>
@@ -894,13 +902,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-md-6">
                             <div class="case">
-                                <div>
+                                <div class="mb-3">
                                     <h5>Запуск и внедрение ERP</h5>
                                     <p>Компанией в кратчайшие сроки был реализован проект по внедрению системы для управления бизнес-процессами и ресурсами обувной фабрики на основе единой базы данных. ERP создает единую унифицированную систему отчетности для всех процессов. Большая производительность за меньший срок.</p>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-between mt-5">
+                                <div class="d-flex align-items-center justify-content-between">
                                     <div>
                                         <img src="imgs/img-3.png" alt="romer" class="logo">
                                     </div>
@@ -910,13 +918,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-md-6">
                             <div class="case">
-                                <div>
+                                <div class="mb-3">
                                     <h5>Запуск и внедрение ERP</h5>
                                     <p>Компанией в кратчайшие сроки был реализован проект по внедрению системы для управления бизнес-процессами и ресурсами обувной фабрики на основе единой базы данных. ERP создает единую унифицированную систему отчетности для всех процессов. Большая производительность за меньший срок.</p>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-between mt-5">
+                                <div class="d-flex align-items-center justify-content-between">
                                     <div>
                                         <img src="imgs/img-3.png" alt="romer" class="logo">
                                     </div>
@@ -926,13 +934,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-md-6">
                             <div class="case">
-                                <div>
+                                <div class="mb-3">
                                     <h5>Автоматизация агрегации кодов на фабриках</h5>
                                     <p>В срок всего 2 месяца нами был реализован проект по маркировке одежды уникальными кодами при помощи ТСД. Это привело к ускорению приема и отгрузки на 40%, а также исключению ошибок при работе с маркированным товаром.</p>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-between mt-5">
+                                <div class="d-flex align-items-center justify-content-between">
                                     <div>
                                         <img src="imgs/img-1.png" alt="техноавиа" class="logo">
                                     </div>
@@ -947,19 +955,19 @@
 
                 <section class="container pt-5 mb-8">
                     <div class="row justify-content-center">
-                        <div class="col-10">
+                        <div class="col-lg-10">
                             <h2>География внедрения продуктов от Verter</h2>
                             <img src="imgs/map.png" alt="map" class="img-fluid d-block mx-auto pt-4">
-                            <button type="button" class="btn-2 fs-12 mt-5 mx-auto">все кейсы</button>
+                            <button type="button" class="btn-2 fs-12 mt-4 mt-sm-5 mx-auto">все кейсы</button>
                         </div>
                     </div>
                 </section>
 
-                <section class="sec-callback">
+                <section class="sec-callback mb-8">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-8">
-                                <div class="row row-cols-2 gx-5">
+                            <div class="col-12 col-lg-10 col-xl-9 col-xxl-8">
+                                <div class="row row-cols-md-2 gx-4 gx-lg-5">
                                     <div>
                                         <h2>Возникли вопросы по агрегации товаров?</h2>
                                         <p>Наш менеджер свяжется с вами, и расскажет о функционале адресный склад все или о все вариантах и возможностях и интеграции</p>
@@ -984,7 +992,7 @@
         <section class="sec-base mb-8">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-10"><h2>База знаний</h2></div>
+                    <div class="col-12 col-lg-10"><h2>База знаний</h2></div>
                 </div>
             </div>
             <div class="slider-wrap">
@@ -999,24 +1007,24 @@
                         <div class="swiper-slide">
                             <div class="container position-relative">
                                 <div class="row justify-content-center">
-                                    <div class="col-10">
+                                    <div class="col-11 col-xl-10">
                                         <div class="row">
-                                            <div class="col-8">
-                                                <h3 class="mb-5">Виды адресного хранения</h3>
+                                            <div class="col-12 col-sm-8">
+                                                <h3 class="mb-4 mb-xl-5">Виды адресного хранения</h3>
 
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <img src="imgs/icons/icon-1.png" alt="Статическое">
+                                                <div class="d-flex align-items-center mb-2 mb-xl-3">
+                                                    <img src="imgs/icons/icon-1.png" alt="Статическое" class="icon">
                                                     <h4 class="ms-3 mb-0">Статическое</h4>
                                                 </div>
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
                                                 
-                                                <div class="d-flex align-items-center mb-3 mt-5">
-                                                    <img src="imgs/icons/icon-2.png" alt="Динамическое">
+                                                <div class="d-flex align-items-center mb-2 mb-xl-3 mt-4 mt-xl-5">
+                                                    <img src="imgs/icons/icon-2.png" alt="Динамическое" class="icon">
                                                     <h4 class="ms-3 mb-0">Динамическое</h4>
                                                 </div>
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 
-                                                <a href="" class="main-color text-decoration-underline fw-5 fs-09 d-block mt-5">подробнее</a>
+                                                <a href="" class="main-color text-decoration-underline fw-5 fs-09 d-block mt-4 mt-xl-5">подробнее</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1027,23 +1035,27 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="container position-relative">
-                                <div class="row">
-                                    <div class="col-7 offset-1">
-                                        <h3 class="mb-5">Виды адресного хранения</h3>
+                                <div class="row justify-content-center">
+                                    <div class="col-11 col-xl-10">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-8">
+                                                <h3 class="mb-4 mb-xl-5">Виды адресного хранения</h3>
 
-                                        <div class="d-flex align-items-center mb-3">
-                                            <img src="imgs/icons/icon-1.png" alt="Статическое">
-                                            <h4 class="ms-3 mb-0">Статическое</h4>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
-                                        
-                                        <div class="d-flex align-items-center mb-3 mt-5">
-                                            <img src="imgs/icons/icon-2.png" alt="Динамическое">
-                                            <h4 class="ms-3 mb-0">Динамическое</h4>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                                <div class="d-flex align-items-center mb-2 mb-xl-3">
+                                                    <img src="imgs/icons/icon-1.png" alt="Статическое" class="icon">
+                                                    <h4 class="ms-3 mb-0">Статическое</h4>
+                                                </div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
+                                                
+                                                <div class="d-flex align-items-center mb-2 mb-xl-3 mt-4 mt-xl-5">
+                                                    <img src="imgs/icons/icon-2.png" alt="Динамическое" class="icon">
+                                                    <h4 class="ms-3 mb-0">Динамическое</h4>
+                                                </div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 
-                                        <a href="" class="main-color text-decoration-underline fw-5 fs-09 d-block mt-5">подробнее</a>
+                                                <a href="" class="main-color text-decoration-underline fw-5 fs-09 d-block mt-4 mt-xl-5">подробнее</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 
@@ -1052,23 +1064,27 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="container position-relative">
-                                <div class="row">
-                                    <div class="col-7 offset-1">
-                                        <h3 class="mb-5">Виды адресного хранения</h3>
+                                <div class="row justify-content-center">
+                                    <div class="col-11 col-xl-10">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-8">
+                                                <h3 class="mb-4 mb-xl-5">Виды адресного хранения</h3>
 
-                                        <div class="d-flex align-items-center mb-3">
-                                            <img src="imgs/icons/icon-1.png" alt="Статическое">
-                                            <h4 class="ms-3 mb-0">Статическое</h4>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
-                                        
-                                        <div class="d-flex align-items-center mb-3 mt-5">
-                                            <img src="imgs/icons/icon-2.png" alt="Динамическое">
-                                            <h4 class="ms-3 mb-0">Динамическое</h4>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                                <div class="d-flex align-items-center mb-2 mb-xl-3">
+                                                    <img src="imgs/icons/icon-1.png" alt="Статическое" class="icon">
+                                                    <h4 class="ms-3 mb-0">Статическое</h4>
+                                                </div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
+                                                
+                                                <div class="d-flex align-items-center mb-2 mb-xl-3 mt-4 mt-xl-5">
+                                                    <img src="imgs/icons/icon-2.png" alt="Динамическое" class="icon">
+                                                    <h4 class="ms-3 mb-0">Динамическое</h4>
+                                                </div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 
-                                        <a href="" class="main-color text-decoration-underline fw-5 fs-09 d-block mt-5">подробнее</a>
+                                                <a href="" class="main-color text-decoration-underline fw-5 fs-09 d-block mt-4 mt-xl-5">подробнее</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 
@@ -1077,23 +1093,27 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="container position-relative">
-                                <div class="row">
-                                    <div class="col-7 offset-1">
-                                        <h3 class="mb-5">Виды адресного хранения</h3>
+                                <div class="row justify-content-center">
+                                    <div class="col-11 col-xl-10">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-8">
+                                                <h3 class="mb-4 mb-xl-5">Виды адресного хранения</h3>
 
-                                        <div class="d-flex align-items-center mb-3">
-                                            <img src="imgs/icons/icon-1.png" alt="Статическое">
-                                            <h4 class="ms-3 mb-0">Статическое</h4>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
-                                        
-                                        <div class="d-flex align-items-center mb-3 mt-5">
-                                            <img src="imgs/icons/icon-2.png" alt="Динамическое">
-                                            <h4 class="ms-3 mb-0">Динамическое</h4>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                                <div class="d-flex align-items-center mb-2 mb-xl-3">
+                                                    <img src="imgs/icons/icon-1.png" alt="Статическое" class="icon">
+                                                    <h4 class="ms-3 mb-0">Статическое</h4>
+                                                </div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
+                                                
+                                                <div class="d-flex align-items-center mb-2 mb-xl-3 mt-4 mt-xl-5">
+                                                    <img src="imgs/icons/icon-2.png" alt="Динамическое" class="icon">
+                                                    <h4 class="ms-3 mb-0">Динамическое</h4>
+                                                </div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 
-                                        <a href="" class="main-color text-decoration-underline fw-5 fs-09 d-block mt-5">подробнее</a>
+                                                <a href="" class="main-color text-decoration-underline fw-5 fs-09 d-block mt-4 mt-xl-5">подробнее</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 
@@ -1106,14 +1126,16 @@
                     <div class="swiper-button-next"></div>
                 </div>
             </div>
-            <a href="" class="btn-2 mx-auto mt-5">все статьи</a>
+            <a href="" class="btn-2 mx-auto mt-4 mt-lg-5">все статьи</a>
         </section>
 
-        <section class="bg-white py-5 mb-5">
+        <section class="sec-working-days py-4 py-md-5 mb-5">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-11 d-flex justify-content-between align-items-center">
-                        <img src="imgs/verter-logo.png" alt="logo">
+                    <div class="col-12 col-xl-11 d-flex justify-content-between align-items-center">
+                        <img src="imgs/logo.svg" alt="Verter" class="logo d-sm-none">
+                        <img src="imgs/verter-logo.png" alt="logo" class="d-none d-sm-block">
+
                         <div class="text-end">
                             <a href="tel:+74950184105" class="d-block fs-13 fw-7 mb-1">+7 495 018 41 05</a>
                             <div class="fs-07">Рабочие дни с ПН - ПТ / 10:00 - 18:00</div>
@@ -1123,9 +1145,10 @@
             </div>
         </section>
     </main>
+
     <footer>
         <div class="container">
-            <div class="d-flex justify-content-around mb-5">
+            <div class="f-menu mb-lg-5">
                 <div>
                     <h6 class="main-color">Склад <img src="imgs/icons/arrow.png" alt="arrow"></h6>
                     <nav>
@@ -1139,7 +1162,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div>
+                <div class="d-none d-sm-block">
                     <h6 class="main-color">Продажи <img src="imgs/icons/arrow.png" alt="arrow"></h6>
                     <nav>
                         <ul class="list-unstyled">
@@ -1152,7 +1175,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div>
+                <div class="d-none d-sm-block">
                     <h6 class="main-color">Производство <img src="imgs/icons/arrow.png" alt="arrow"></h6>
                     <nav>
                         <ul class="list-unstyled">
@@ -1165,7 +1188,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div>
+                <div class="d-none d-sm-block">
                     <h6 class="main-color">О Verter <img src="imgs/icons/arrow.png" alt="arrow"></h6>
                     <nav>
                         <ul class="list-unstyled">
@@ -1177,7 +1200,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div>
+                <div class="d-none d-sm-block">
                     <nav>
                         <ul class="list-unstyled">
                             <li><h6 class="main-color"><a href="">Техподдержка <img src="imgs/icons/arrow.png" alt="arrow"></a></h6></li>
@@ -1188,17 +1211,25 @@
                         </ul>
                     </nav>
                 </div>
+                <div>
+                    <div class="mb-2">Verter в соцсетях:</div>
+                    <div class="social">
+                        <a href="" class="ms-lg-3"><img src="imgs/icons/dzen.svg" alt="dzen"></a>
+                        <a href="" class="ms-3"><img src="imgs/icons/telegram.svg" alt="telegram"></a>
+                        <a href="" class="ms-3"><img src="imgs/icons/vk.svg" alt="vk"></a>
+                    </div>
+                </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-11 d-flex justify-content-between align-items-center">
+                <div class="col-12 col-xl-11 d-flex justify-content-between align-items-center">
                     <div class="d-flex align-items-center">
                         <img src="imgs/logo.svg" alt="logo" class="logo">
-                        <div class="ms-4">
+                        <div class="ms-3 ms-xl-4">
                             <div>Copyright Verter</div>
                             <div class="fs-07 light-color">Используем cookies для корректной работы сайта, персонализации пользователей<br/> и других целей, предусмотренных политикой обработки персональных данных</div>
                         </div>
                     </div>
-                    <div class="social">
+                    <div class="social d-none d-lg-flex">
                         <span>Verter в соцсетях:</span>
                         <a href="" class="ms-3"><img src="imgs/icons/dzen.svg" alt="dzen"></a>
                         <a href="" class="ms-3"><img src="imgs/icons/telegram.svg" alt="telegram"></a>
@@ -1208,6 +1239,35 @@
             </div>
         </div>
     </footer>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
+        <div class="offcanvas-header">
+            <h3 class="offcanvas-title main-color">Меню</h3>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <a href="tel:+74950184105" class="d-block fs-14 fw-5 mb-4">+7 495 018 41 05</a>
+            <nav>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="/">Продукты</a>
+                    </li>
+                    <li>
+                        <a href="/">Техподдержка</a>
+                    </li>
+                    <li>
+                        <a href="">Функции</a>
+                    </li>
+                    <li>
+                        <a href="">База знаний</a>
+                    </li>
+                    <li>
+                        <a href="">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
