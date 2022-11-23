@@ -633,50 +633,142 @@ main {
 }
 @media (max-width: 575px) {
   .sec-products {
-    margin-top: -50px;
+    margin-top: 2em;
     font-size: 10px;
   }
 }
-.sec-products figure {
+.sec-products .products-grid {
+  list-style: none;
+  padding: 0px;
+  --cell-height: 360px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: var(--cell-height);
+  grid-auto-rows: var(--cell-height);
+  grid-auto-flow: row dense;
+  gap: 1.1em 1.1em;
+}
+@media (max-width: 1399px) {
+  .sec-products .products-grid {
+    --cell-height: 320px;
+  }
+}
+@media (max-width: 1199px) {
+  .sec-products .products-grid {
+    --cell-height: 300px;
+  }
+}
+@media (max-width: 991px) {
+  .sec-products .products-grid {
+    --cell-height: 250px;
+  }
+}
+@media (max-width: 767px) {
+  .sec-products .products-grid {
+    --cell-height: 240px;
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 575px) {
+  .sec-products .products-grid {
+    --cell-height: auto;
+  }
+}
+.sec-products .products-grid li:nth-child(odd) figure {
+  background-color: #fff;
+  color: #1a1b28;
+}
+.sec-products .products-grid li:nth-child(odd) figure h2 {
+  color: #0160fe;
+}
+.sec-products .products-grid li:nth-child(odd) figure p {
+  text-shadow: 0px 1px 0 rgba(255, 255, 255, 0.25), 0px -1px 0 rgba(255, 255, 255, 0.25), 1px 0px 0 rgba(255, 255, 255, 0.25), -1px 0px 0 rgba(255, 255, 255, 0.25), 1px 1px 0 rgba(255, 255, 255, 0.25), 1px -1px 0 rgba(255, 255, 255, 0.25), -1px 1px 0 rgba(255, 255, 255, 0.25), -1px -1px 0 rgba(255, 255, 255, 0.25);
+  -webkit-text-shadow: 0px 1px 0 rgba(255, 255, 255, 0.25), 0px -1px 0 rgba(255, 255, 255, 0.25), 1px 0px 0 rgba(255, 255, 255, 0.25), -1px 0px 0 rgba(255, 255, 255, 0.25), 1px 1px 0 rgba(255, 255, 255, 0.25), 1px -1px 0 rgba(255, 255, 255, 0.25), -1px 1px 0 rgba(255, 255, 255, 0.25), -1px -1px 0 rgba(255, 255, 255, 0.25);
+  -moz-text-shadow: 0px 1px 0 rgba(255, 255, 255, 0.25), 0px -1px 0 rgba(255, 255, 255, 0.25), 1px 0px 0 rgba(255, 255, 255, 0.25), -1px 0px 0 rgba(255, 255, 255, 0.25), 1px 1px 0 rgba(255, 255, 255, 0.25), 1px -1px 0 rgba(255, 255, 255, 0.25), -1px 1px 0 rgba(255, 255, 255, 0.25), -1px -1px 0 rgba(255, 255, 255, 0.25);
+}
+.sec-products .products-grid li:nth-child(even) figure {
+  background-color: #0160fe;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .sec-products .products-grid li:nth-child(even) figure p {
+    text-shadow: 0px 1px 0 rgba(0, 0, 0, 0.25), 0px -1px 0 rgba(0, 0, 0, 0.25), 1px 0px 0 rgba(0, 0, 0, 0.25), -1px 0px 0 rgba(0, 0, 0, 0.25), 1px 1px 0 rgba(0, 0, 0, 0.25), 1px -1px 0 rgba(0, 0, 0, 0.25), -1px 1px 0 rgba(0, 0, 0, 0.25), -1px -1px 0 rgba(0, 0, 0, 0.25);
+    -webkit-text-shadow: 0px 1px 0 rgba(0, 0, 0, 0.25), 0px -1px 0 rgba(0, 0, 0, 0.25), 1px 0px 0 rgba(0, 0, 0, 0.25), -1px 0px 0 rgba(0, 0, 0, 0.25), 1px 1px 0 rgba(0, 0, 0, 0.25), 1px -1px 0 rgba(0, 0, 0, 0.25), -1px 1px 0 rgba(0, 0, 0, 0.25), -1px -1px 0 rgba(0, 0, 0, 0.25);
+    -moz-text-shadow: 0px 1px 0 rgba(0, 0, 0, 0.25), 0px -1px 0 rgba(0, 0, 0, 0.25), 1px 0px 0 rgba(0, 0, 0, 0.25), -1px 0px 0 rgba(0, 0, 0, 0.25), 1px 1px 0 rgba(0, 0, 0, 0.25), 1px -1px 0 rgba(0, 0, 0, 0.25), -1px 1px 0 rgba(0, 0, 0, 0.25), -1px -1px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+.sec-products .products-grid li:nth-child(3n+1) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+@media (max-width: 767px) {
+  .sec-products .products-grid li:nth-child(3n+1) {
+    grid-column: span 1;
+  }
+}
+.sec-products .products-grid li:nth-child(3n+1) .text {
+  max-width: 35%;
+}
+@media (max-width: 1199px) {
+  .sec-products .products-grid li:nth-child(3n+1) .text {
+    max-width: 40%;
+  }
+}
+@media (max-width: 767px) {
+  .sec-products .products-grid li:nth-child(3n+1) .text {
+    max-width: 50%;
+  }
+}
+@media (max-width: 575px) {
+  .sec-products .products-grid li:nth-child(3n+1) .text {
+    max-width: 60%;
+  }
+}
+.sec-products .products-grid li:nth-child(3n+1) .text .logo {
+  max-width: 160px;
+  max-height: 40px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  margin-top: 1em;
+}
+.sec-products .products-grid li:nth-child(3n+2), .sec-products .products-grid li:nth-child(3n+3) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+.sec-products .products-grid li:nth-child(3n+2) .text, .sec-products .products-grid li:nth-child(3n+3) .text {
+  max-width: 70%;
+}
+@media (max-width: 1199px) {
+  .sec-products .products-grid li:nth-child(3n+2) .text, .sec-products .products-grid li:nth-child(3n+3) .text {
+    max-width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .sec-products .products-grid li:nth-child(3n+2) .text, .sec-products .products-grid li:nth-child(3n+3) .text {
+    max-width: 50%;
+  }
+}
+@media (max-width: 575px) {
+  .sec-products .products-grid li:nth-child(3n+2) .text, .sec-products .products-grid li:nth-child(3n+3) .text {
+    max-width: 60%;
+  }
+}
+.sec-products .products-grid li:nth-child(3n+2) .text .logo, .sec-products .products-grid li:nth-child(3n+3) .text .logo {
+  max-width: 120px;
+  max-height: 30px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  margin-top: 0.5em;
+}
+.sec-products .products-grid li figure {
   width: 100%;
-  height: 400px;
+  height: var(--cell-height);
   border-radius: 1em;
   box-shadow: 0px 3px 50px rgba(1, 96, 254, 0.21);
   overflow: hidden;
   position: relative;
 }
-@media (max-width: 1399px) {
-  .sec-products figure {
-    height: 350px;
-  }
-}
-@media (max-width: 991px) {
-  .sec-products figure {
-    height: 280px;
-  }
-}
-@media (max-width: 767px) {
-  .sec-products figure {
-    height: 240px;
-  }
-}
-@media (max-width: 575px) {
-  .sec-products figure {
-    height: 200px;
-  }
-}
-.sec-products figure.light {
-  background-color: #fff;
-  color: #1a1b28;
-}
-.sec-products figure.light h2 {
-  color: #0160fe;
-}
-.sec-products figure.dark {
-  background-color: #0160fe;
-  color: #fff;
-}
-.sec-products figure img {
+.sec-products .products-grid li figure .img {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -686,7 +778,7 @@ main {
      object-fit: cover;
   z-index: 1;
 }
-.sec-products figure figcaption {
+.sec-products .products-grid li figure figcaption {
   height: 100%;
   position: relative;
   z-index: 2;
@@ -694,20 +786,35 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 2em;
+  padding: 1em 2em;
 }
-.sec-products figure figcaption h2 {
+.sec-products .products-grid li figure figcaption h2 {
   font-size: 2.8em;
   margin-bottom: 0.5em;
 }
-.sec-products figure figcaption p {
-  font-size: 1.2em;
-  line-height: 170%;
+@media (max-width: 1199px) {
+  .sec-products .products-grid li figure figcaption h2 {
+    font-size: 2.5em;
+  }
 }
-.sec-products figure figcaption .more {
+@media (max-width: 575px) {
+  .sec-products .products-grid li figure figcaption h2 {
+    font-size: 1.8em;
+  }
+}
+.sec-products .products-grid li figure figcaption p {
+  font-size: 1.2em;
+  line-height: 150%;
+}
+.sec-products .products-grid li figure figcaption .more {
   color: inherit;
   font-weight: 500;
   text-decoration: underline;
+}
+@media (max-width: 575px) {
+  .sec-products .products-grid li figure figcaption .more {
+    margin-top: 1em;
+  }
 }
 
 .sec-scope .icon {
@@ -1545,16 +1652,16 @@ main {
   box-shadow: 0px 3px 100px rgba(0, 59, 157, 0.21);
 }
 .sec-base .swiper-1 {
-  padding: 5em 0;
+  padding: 3.5em 0;
 }
 @media (max-width: 1199px) {
   .sec-base .swiper-1 {
-    padding: 3em 0;
+    padding: 2em 0;
   }
 }
 @media (max-width: 991px) {
   .sec-base .swiper-1 {
-    padding: 2em 0;
+    padding: 1.5em 0;
     font-size: 12px;
   }
 }
@@ -1612,6 +1719,7 @@ footer {
 footer .f-menu {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 4em;
 }
 @media (max-width: 1199px) {
   footer .f-menu {
@@ -1622,6 +1730,7 @@ footer .f-menu {
   footer .f-menu {
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 2em;
   }
 }
 @media (max-width: 991px) and (max-width: 575px) {
@@ -1638,6 +1747,11 @@ footer .f-menu {
 @media (max-width: 991px) and (max-width: 767px) {
   footer .f-menu > div {
     width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  footer .f-menu {
+    margin-bottom: 0em;
   }
 }
 footer .logo {
