@@ -49,6 +49,28 @@ if (hoverDivs){
 }
 
 
+/* fixed menu */
+// const stickyBlocks = document.getElementsByClassName('sticky-block')
+// if (stickyBlocks){
+//   const arrStickyBlocks = Array.from(stickyBlocks)
+//     arrStickyBlocks.forEach(item => {
+//       let box = item.getBoundingClientRect()
+//       let offsetElem = box.top + window.pageYOffset
+//       console.log('offsetElem'+offsetElem)
+//       window.addEventListener('scroll', function() {
+//         let scrollTop = window.scrollY 
+//         console.log('scrollTop'+scrollTop)
+//         if (scrollTop > offsetElem) {
+//           item.classList.add("sticky")
+//         } else {
+//           item.classList.remove("sticky")
+//         }
+//       });
+//     })
+  
+// }
+
+
 const mobileMenu = document.getElementById('offcanvasMenu')
 const bsMenu = new bootstrap.Offcanvas(mobileMenu)
 function openMenu(btn) {
@@ -62,17 +84,63 @@ function openMenu(btn) {
 }
 
 
-const swiper = new Swiper('.swiper-1', {
-    loop: true,
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true
-    },
-    pagination: {
-      el: '.swiper-pagination',
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-});
+/*************** 
+CUSTOM SELECT
+****************/
+window.onload = function() {
+  let selectElement = document.querySelectorAll('.custom-select')
+  if(selectElement) {
+    let arrSelects = Array.from(selectElement)
+    arrSelects.forEach(item => {
+        const btn = item.querySelector('button')
+        const options = item.querySelector('.custom-select-options')
+        let inputs = item.querySelectorAll('input')
+        let name = inputs[0].name
+
+        let curInp; //выбранный input radio
+        for(let i = 0; i < inputs.length; i++){
+          if(inputs[i].checked){
+            curInp = inputs[i]
+          }
+        }
+
+        if(curInp) {
+          let labelContent = curInp.nextElementSibling.innerHTML //содержимое label следующего после выбранного input
+          btn.innerHTML = labelContent
+        } else {
+          btn.innerHTML = "Не выбрано"
+        }
+
+        const toggleMenu = function() {
+          // открываем/закрываем окно навигации, добаляя/удаляя активный класс
+          options.classList.toggle('opened')
+        }
+
+        btn.addEventListener('click', () => { // при клике на кнопку
+          toggleMenu()
+        })
+        
+        //скрываем опции при клике вне селекта
+        document.addEventListener('click', function(e) {
+          const currentSel = target == item || item.contains(e.target)
+          const isOpened = options.classList.contains('opened')
+          if (!currentSel && isOpened) {
+            toggleMenu()
+          }
+        })
+
+        let arrRadio = Array.from(inputs)
+        arrRadio.forEach(item => {
+          item.addEventListener('change', () => {
+            changeValueLabel(item)
+          })
+        })
+    
+        function changeValueLabel(el){
+          let labelContent = el.nextElementSibling.innerHTML;
+          btn.innerHTML = labelContent;
+          toggleMenu();
+        }
+    })
+  }
+}
