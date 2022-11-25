@@ -1814,6 +1814,7 @@ main {
                     &.bg-img {
                         position: relative;
                         justify-content: flex-end;
+                        overflow: hidden;
                         img {
                             position: absolute;
                             top: 0px;

@@ -2158,6 +2158,7 @@ main {
 .sec-main-base .container .main-base-grid div figure.bg-img {
   position: relative;
   justify-content: flex-end;
+  overflow: hidden;
 }
 .sec-main-base .container .main-base-grid div figure.bg-img img {
   position: absolute;
