@@ -579,13 +579,6 @@ h6 {
   }
 }
 
-.box {
-  background-color: #fff;
-  border-radius: 1em;
-  -webkit-box-shadow: 0px 3px 100px rgba(0, 59, 157, 0.21);
-          box-shadow: 0px 3px 100px rgba(0, 59, 157, 0.21);
-}
-
 .swiper-1 {
   overflow: hidden;
 }
@@ -799,17 +792,57 @@ main {
   z-index: 1;
 }
 
+.sec-main {
+  padding-top: 380px;
+  overflow: hidden;
+}
+
+.sec-main .box {
+  position: relative;
+  background-color: #0160fe;
+  color: #fff;
+  border-radius: 1em;
+  padding: 5em 5em 2em 5em;
+}
+
+.sec-main .box h1 {
+  font-size: 5em;
+  font-weight: 700;
+  margin-bottom: .6em;
+}
+
+.sec-main .box .text {
+  position: relative;
+  width: 70%;
+  z-index: 2;
+}
+
+.sec-main .box img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 40%;
+  height: 100%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  z-index: 1;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 .sec-product-main {
   position: relative;
   height: 1000px;
   color: #fff;
   padding-top: 220px;
+  margin-bottom: -160px;
 }
 
 @media (max-width: 1199px) {
   .sec-product-main {
     height: 850px;
     padding-top: 185px;
+    margin-top: -120px;
   }
 }
 
@@ -830,6 +863,7 @@ main {
   .sec-product-main {
     padding-top: 80px;
     height: 500px;
+    margin-bottom: 2em;
   }
 }
 
@@ -896,16 +930,6 @@ main {
   }
 }
 
-.sec-products {
-  margin-top: -160px;
-}
-
-@media (max-width: 1199px) {
-  .sec-products {
-    margin-top: -120px;
-  }
-}
-
 @media (max-width: 991px) {
   .sec-products {
     font-size: 12px;
@@ -914,7 +938,6 @@ main {
 
 @media (max-width: 575px) {
   .sec-products {
-    margin-top: 2em;
     font-size: 10px;
   }
 }
@@ -1269,6 +1292,12 @@ main {
   z-index: 4;
 }
 
+.nav-tabs .nav-item .nav-link.white.active {
+  --bg-color: #fff;
+  background-color: var(--bg-color);
+  color: #0A4AB6;
+}
+
 .nav-tabs .nav-item .nav-link::before {
   content: '';
   position: absolute;
@@ -1310,6 +1339,12 @@ main {
 
 .tab-content .tab-pane {
   position: relative;
+}
+
+.tab-content.white {
+  background-color: #fff;
+  padding-top: 4em;
+  padding-bottom: 4em;
 }
 
 .tab-top {

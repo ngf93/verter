@@ -64,6 +64,11 @@ $gradient: linear-gradient(to right top, #2ae8f8, #0a2be9);
     border-radius: 1em;
     box-shadow: 0px 3px 100px rgba($color: #003b9d, $alpha: .21);
 }
+@mixin box2 {
+    background-color: $main-color;
+    color: #fff;
+    border-radius: 1em;
+}
 @mixin shadow {
     box-shadow: 0px 3px 100px rgba($color: #003b9d, $alpha: .21);
 }
@@ -394,9 +399,6 @@ h6 {
     }
 }
 
-.box {
-    @include box();
-}
 
 .swiper-1 {
     overflow: hidden;
@@ -547,14 +549,46 @@ main {
     z-index: 1;
 }
 
+.sec-main {
+    padding-top: 380px;
+    overflow: hidden;
+    .box {
+        position: relative;
+        @include box2();
+        padding: 5em 5em 2em 5em;
+        h1 {
+            font-size: 5em;
+            font-weight: 700;
+            margin-bottom: .6em;
+        }
+        .text {
+            position: relative;
+            width: 70%;
+            z-index: 2;
+        }
+        img {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 40%;
+            height: 100%;
+            object-fit: scale-down;
+            z-index: 1;
+            transform: scale(1.2);
+        }
+    }
+}
+
 .sec-product-main {
     position: relative;
     height: 1000px;
     color: #fff;
     padding-top: 220px;
+    margin-bottom: -160px;
     @media (max-width: 1199px){
         height: 850px;
         padding-top: 185px;
+        margin-top: -120px;
     }
     @media (max-width: 991px){
         padding-top: 150px;
@@ -566,6 +600,7 @@ main {
     @media (max-width: 575px){
         padding-top: 80px;
         height: 500px;
+        margin-bottom: 2em;
     }
     .bg {
         position: absolute;
@@ -610,15 +645,10 @@ main {
 }
 
 .sec-products {
-    margin-top: -160px;
-    @media (max-width: 1199px){
-        margin-top: -120px;
-    }
     @media (max-width: 991px){
         font-size: 12px;
     }
     @media (max-width: 575px){
-        margin-top: 2em;
         font-size: 10px;
     }
     .products-grid {
@@ -853,6 +883,11 @@ main {
                 color: #fff;
                 z-index: 4;
             }
+            &.white.active {
+                --bg-color: #fff;
+                background-color: var(--bg-color);
+                color: $accent-color;
+            }
             &::before {
                 content: '';
                 position: absolute;
@@ -885,6 +920,11 @@ main {
     z-index: 2;
     .tab-pane {
         position: relative;
+    }
+    &.white {
+        background-color: #fff;
+        padding-top: 4em;
+        padding-bottom: 4em;
     }
 }
 
