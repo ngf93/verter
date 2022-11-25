@@ -20,11 +20,9 @@ if (hoverDivs){
   const Arr = Array.from(hoverDivs)
   Arr.forEach(item => {
     item.addEventListener('mouseenter', (event) => {
-      console.log('mouseenter')
       const parent = item.parentElement
       const parentChildren = Array.from(parent.children);
       index = parentChildren.indexOf(item)
-      console.log(index)
 
       const allRows = Array.from(document.getElementsByClassName('table-grid-row'))
 
@@ -33,11 +31,9 @@ if (hoverDivs){
       })
     })
     item.addEventListener('mouseleave', (event) => {
-      console.log('mouseleave')
       const parent = item.parentElement
       const parentChildren = Array.from(parent.children);
       index = parentChildren.indexOf(item)
-      console.log(index)
 
       const allRows = Array.from(document.getElementsByClassName('table-grid-row'))
 
@@ -122,7 +118,7 @@ window.onload = function() {
         
         //скрываем опции при клике вне селекта
         document.addEventListener('click', function(e) {
-          const currentSel = target == item || item.contains(e.target)
+          const currentSel = e.target == item || item.contains(e.target)
           const isOpened = options.classList.contains('opened')
           if (!currentSel && isOpened) {
             toggleMenu()
