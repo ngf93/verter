@@ -28,3 +28,18 @@ const swiper2= new Swiper('.swiper-brands', {
     }
   }
 });
+
+
+const swiper3= new Swiper('.swiper-main-prods', {
+  loop: false,
+  slidesPerView: 2,
+  spaceBetween: 20,
+  init: true,
+  breakpoints: {
+    768: {
+      init: false,
+      slidesPerView: 3,
+      spaceBetween: 40,
+    }
+  }
+});
