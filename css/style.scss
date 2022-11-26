@@ -1180,11 +1180,12 @@ main {
     }
 }
 
-.grid-1 {
+
+.grid-0 {
     --cell-height: 315px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, var(--cell-height));
+    grid-template-rows: var(--cell-height);
     grid-auto-rows: var(--cell-height);
     grid-auto-flow: row dense;
     gap: 1em 1em;
@@ -1212,6 +1213,9 @@ main {
         border-radius: 1.2em;
         overflow: hidden;
         counter-increment: my-awesome-counter;
+        grid-column: span 1;
+        grid-row: span 1;
+        --w: 100%;
         &::before {
             content: counter(my-awesome-counter)'.';
             position: absolute;
@@ -1278,12 +1282,36 @@ main {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            @media (max-width: 575px){
+                padding: .5em;
+            }
+            h5 {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                line-height: 1.25em;
+                max-height: 2.5em;
+            }
+            .text {
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                line-height: 1.25em;
+                max-height: 5em;
+            }
         }
         &:hover {
             .description {
                 opacity: 1;
             }
         }
+    }
+}
+.grid-1 {
+    @extend .grid-0;
+    .card-capability {
         &:nth-child(8n+1){
             grid-column: span 2;
             grid-row: span 1;
@@ -1319,6 +1347,7 @@ main {
             }
             @media (min-width: 991px){
                 figcaption {font-size: 2em;}
+                .description {font-size: 1.3em;}
             }
             @media (max-width: 991px){
                 grid-column: span 1;
@@ -1333,6 +1362,7 @@ main {
                 grid-column: span 2;
                 grid-row: span 2;
                 figcaption {font-size: 2em;}
+                .description {font-size: 1.3em;}
             }
         }
         &:nth-child(8n+7){
@@ -1353,6 +1383,7 @@ main {
         }
     }
 }
+
 
 .grid-cols-2 {
     list-style: none;
