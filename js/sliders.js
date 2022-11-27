@@ -32,11 +32,15 @@ const swiper2= new Swiper('.swiper-brands', {
 
 const swiper3= new Swiper('.swiper-main-prods', {
   loop: false,
-  slidesPerView: 2,
+  slidesPerView: 1,
   spaceBetween: 20,
   init: true,
   breakpoints: {
-    768: {
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    992: {
       init: false,
       slidesPerView: 3,
       spaceBetween: 40,
@@ -47,7 +51,7 @@ const swiper3= new Swiper('.swiper-main-prods', {
 
 const swiper4= new Swiper('.swiper-reviews', {
   loop: true,
-  slidesPerView: 1,
+  slidesPerView: 'auto',
   spaceBetween: 30,
   centeredSlides: true,
   freeMode: true,
