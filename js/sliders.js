@@ -43,3 +43,32 @@ const swiper3= new Swiper('.swiper-main-prods', {
     }
   }
 });
+
+
+const swiper4= new Swiper('.swiper-reviews', {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 30,
+  centeredSlides: true,
+  freeMode: true,
+  breakpoints: {
+    992: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    }
+  }
+});
+
+
+const swiper5= new Swiper('.swiper-gallery', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
