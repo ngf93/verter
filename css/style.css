@@ -933,6 +933,10 @@ main {
   }
 }
 
+.sec-main .box-main p {
+  width: 90%;
+}
+
 .sec-main .box-main .text {
   position: relative;
   width: 70%;
@@ -967,7 +971,7 @@ main {
   margin-top: 0%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .sec-main .box-main img {
     display: none;
   }
@@ -3757,12 +3761,22 @@ footer .icon {
           align-items: center;
 }
 
+@media (min-width: 991px) {
+  .social {
+    margin-left: 100px;
+  }
+}
+
 @media (max-width: 991px) {
   .social {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+}
+
+.social span {
+  white-space: nowrap;
 }
 
 .social img {

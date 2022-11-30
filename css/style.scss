@@ -650,6 +650,9 @@ main {
                 font-size: 2.5em;
             }
         }
+        p {
+            width: 90%;
+        }
         .text {
             position: relative;
             width: 70%;
@@ -673,7 +676,7 @@ main {
             &.element-show {
                 margin-top: 0%;
             }
-            @media (max-width: 767px){
+            @media (max-width: 991px){
                 display: none;
             }
         }
@@ -2485,9 +2488,13 @@ footer {
 }
 .social {
     @include flex-center();
+    @media (min-width: 991px){
+        margin-left: 100px;
+    }
     @media (max-width: 991px){
         justify-content: flex-start;
     }
+    span {white-space: nowrap;}
     img {
         width: 1.8em;
         @media (max-width: 991px){
