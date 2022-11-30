@@ -583,8 +583,20 @@ h6 {
   }
 }
 
-.swiper-1, .swiper-brands, .swiper-main-prods, .swiper-reviews, .swiper-gallery {
+.swiper-1, .swiper-brands, .swiper-reviews, .swiper-gallery {
   overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .swiper-main-prods {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 991px) {
+  .swiper-main-prods {
+    overflow: hidden;
+  }
 }
 
 .swiper-button-prev, .swiper-button-next {
@@ -1427,8 +1439,8 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: right bottom;
-     object-position: right bottom;
+  -o-object-position: right top;
+     object-position: right top;
   z-index: 1;
 }
 
@@ -1449,17 +1461,17 @@ main {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 1em 2em;
+  padding: 1.5em 2em;
 }
 
 .sec-products .products-grid li figure figcaption h2 {
-  font-size: 2.8em;
+  font-size: 2.3em;
   margin-bottom: .5em;
 }
 
 @media (max-width: 1199px) {
   .sec-products .products-grid li figure figcaption h2 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 }
 
@@ -1471,7 +1483,7 @@ main {
 
 .sec-products .products-grid li figure figcaption p {
   font-size: 1.2em;
-  line-height: 150%;
+  line-height: 135%;
 }
 
 .sec-products .products-grid li figure figcaption .more {
@@ -3190,7 +3202,7 @@ main {
 .sec-brands .title {
   position: absolute;
   z-index: 1;
-  top: -.18em;
+  top: -.125em;
   left: 0px;
   font-size: 22vw;
   text-align: center;
@@ -3211,18 +3223,19 @@ main {
 }
 
 .sec-brands .container .swiper-brands {
-  margin: 5em 0;
+  margin: 5em auto;
+  width: 80%;
 }
 
 @media (max-width: 767px) {
   .sec-brands .container .swiper-brands {
-    margin: 3.5em 0;
+    margin: 3.5em auto;
   }
 }
 
 @media (max-width: 575px) {
   .sec-brands .container .swiper-brands {
-    margin: 2.5em 0;
+    margin: 2.5em auto;
   }
 }
 
@@ -3233,6 +3246,7 @@ main {
      object-fit: scale-down;
   -o-object-position: center;
      object-position: center;
+  margin: 0 auto;
 }
 
 @media (max-width: 767px) {
@@ -3364,12 +3378,12 @@ main {
 .sec-main-base .title {
   position: absolute;
   z-index: 1;
-  top: -.18em;
+  top: -15px;
   left: 0px;
   font-size: 22vw;
   text-align: left;
   font-weight: 700;
-  line-height: 100%;
+  line-height: 80%;
   color: #e6e6e6;
 }
 
@@ -3554,12 +3568,12 @@ main {
 .sec-video .title {
   position: absolute;
   z-index: 1;
-  top: -.18em;
+  top: -15px;
   left: 0px;
   font-size: 28vw;
   text-align: left;
   font-weight: 700;
-  line-height: 100%;
+  line-height: 80%;
   color: #e6e6e6;
 }
 
