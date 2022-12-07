@@ -204,6 +204,7 @@ select {
         border: 1px solid #fff;
         border-radius: 4px;
         -moz-appearance: textfield;
+        appearance: textfield;
         &::-webkit-outer-spin-button,
         &::-webkit-inner-spin-button {
             -webkit-appearance: none;
@@ -211,7 +212,10 @@ select {
             appearance: none;
             margin: 0;
         }
-        &:hover, &:focus {-moz-appearance: number-input;}
+        &:hover, &:focus {
+            -moz-appearance: number-input;
+            appearance: number-input;
+        }
     }
     button {
         position: absolute;
