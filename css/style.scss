@@ -2430,9 +2430,66 @@ main {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        gap: 1.5em 1.5em;
+        gap: 2em 2em;
         div {
             grid-row: span 1;
+            .webinar-card {
+                background-color: $main-color;
+                color: #fff;
+                border-radius: 1em;
+                overflow: hidden;
+                padding: 1.5em;
+                height: 410px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-bottom: 1em;
+                isolation: isolate;
+                transform: translateZ(0);
+                position: relative;
+                .bg, .bg-grad {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    
+                .bg {
+                    object-fit: cover;
+                }
+                }
+                .bg-grad {
+                    background-image: $gradient4;
+                }
+                time {
+                    line-height: 120%;
+                    position: relative;
+                    z-index: 2;
+                }
+                h5 {
+                    position: relative;
+                    z-index: 2;
+                }
+                .speaker {
+                    position: relative;
+                    z-index: 2;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    h6 {margin-bottom: .5em;}
+                    p {
+                        font-size: .9em;
+                        line-height: 120%;
+                    }
+                }
+                .photo {
+                    width: 90px;
+                    height: 90px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
             &:nth-child(1) {
                 grid-column: 1/2;
             }

@@ -3662,11 +3662,96 @@ main {
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
-  gap: 1.5em 1.5em;
+  gap: 2em 2em;
 }
 
 .sec-main-base .webinars-grid div {
   grid-row: span 1;
+}
+
+.sec-main-base .webinars-grid div .webinar-card {
+  background-color: #0160fe;
+  color: #fff;
+  border-radius: 1em;
+  overflow: hidden;
+  padding: 1.5em;
+  height: 410px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1em;
+  isolation: isolate;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  position: relative;
+}
+
+.sec-main-base .webinars-grid div .webinar-card .bg, .sec-main-base .webinars-grid div .webinar-card .bg-grad {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.sec-main-base .webinars-grid div .webinar-card .bg .bg, .sec-main-base .webinars-grid div .webinar-card .bg-grad .bg {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.sec-main-base .webinars-grid div .webinar-card .bg-grad {
+  background-image: -webkit-gradient(linear, left top, right top, from(#0a2be9), to(#2ae8f8));
+  background-image: linear-gradient(to right, #0a2be9, #2ae8f8);
+}
+
+.sec-main-base .webinars-grid div .webinar-card time {
+  line-height: 120%;
+  position: relative;
+  z-index: 2;
+}
+
+.sec-main-base .webinars-grid div .webinar-card h5 {
+  position: relative;
+  z-index: 2;
+}
+
+.sec-main-base .webinars-grid div .webinar-card .speaker {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sec-main-base .webinars-grid div .webinar-card .speaker h6 {
+  margin-bottom: .5em;
+}
+
+.sec-main-base .webinars-grid div .webinar-card .speaker p {
+  font-size: .9em;
+  line-height: 120%;
+}
+
+.sec-main-base .webinars-grid div .webinar-card .photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .sec-main-base .webinars-grid div:nth-child(1) {
