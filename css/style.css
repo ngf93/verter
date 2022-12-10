@@ -606,6 +606,41 @@ h6 {
   }
 }
 
+.accordion {
+  --bs-accordion-color: #fff;
+  --bs-accordion-bg: #0052db;
+  --bs-accordion-border-radius: 0px;
+  --bs-accordion-border-color: transparent;
+  --bs-accordion-border-width: 0px;
+  --bs-accordion-inner-border-radius: 0px;
+  --bs-accordion-btn-padding-x: 2em;
+  --bs-accordion-btn-padding-y: 1em;
+  --bs-accordion-btn-color: #fff;
+  --bs-accordion-btn-bg: #0160fe;
+  --bs-accordion-btn-icon: url(../imgs/icons/chevron-down-white.svg);
+  --bs-accordion-btn-active-icon: url(../imgs/icons/chevron-down-white.svg);
+  --bs-accordion-btn-focus-border-color: transparent;
+  --bs-accordion-btn-focus-box-shadow: none;
+  --bs-accordion-body-padding-x: 0;
+  --bs-accordion-body-padding-y: 0;
+  --bs-accordion-active-color: #fff;
+  --bs-accordion-active-bg: #0160fe;
+}
+
+.accordion-button {
+  text-decoration: underline;
+  padding-left: 20%;
+}
+
+.accordion-body ul li {
+  padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
+  padding-left: 25%;
+}
+
+.accordion-body ul li a {
+  text-decoration: underline;
+}
+
 .swiper-1, .swiper-brands, .swiper-reviews, .swiper-gallery {
   overflow: hidden;
 }
@@ -1140,9 +1175,9 @@ main {
   left: 0px;
   width: 100%;
   height: 100%;
+  z-index: 1;
   -o-object-fit: cover;
      object-fit: cover;
-  z-index: -1;
 }
 
 .sec-product-main .container {
@@ -1238,9 +1273,9 @@ main {
   left: 0px;
   width: 100%;
   height: 100%;
+  z-index: 1;
   -o-object-fit: cover;
      object-fit: cover;
-  z-index: -1;
 }
 
 .sec-case-main .container {
@@ -1309,6 +1344,59 @@ main {
   .sec-base-main {
     padding-top: 100px;
   }
+}
+
+.sec-base-main .container {
+  position: relative;
+  z-index: 2;
+}
+
+.sec-func-main {
+  background-color: #0160fe;
+  color: #fff;
+  height: 550px;
+  padding-top: 220px;
+  position: relative;
+}
+
+@media (max-width: 1399px) {
+  .sec-func-main {
+    padding-top: 200px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .sec-func-main {
+    padding-top: 180px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .sec-func-main {
+    padding-top: 140px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sec-func-main {
+    padding-top: 100px;
+  }
+}
+
+.sec-func-main .bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.sec-func-main .container {
+  position: relative;
+  z-index: 2;
 }
 
 .sec-text p {
@@ -3253,9 +3341,12 @@ main {
 }
 
 .sec-callback {
-  background: url(../imgs/bg/man.png) no-repeat #0160fe;
-  background-size: auto 95%;
-  background-position: 0% 100%;
+  background-image: url(../imgs/bg/man.png), -webkit-gradient(linear, left top, left bottom, from(#0145dd), to(transparent));
+  background-image: url(../imgs/bg/man.png), linear-gradient(to bottom, #0145dd, transparent);
+  background-repeat: no-repeat;
+  background-color: #0160fe;
+  background-size: auto 95%, cover;
+  background-position: 0% 100%, 0% 0%;
   color: #fff;
   padding: 4em 0;
 }
@@ -3964,6 +4055,84 @@ main {
   overflow: hidden;
   line-height: 150%;
   height: 3em;
+}
+
+.all-functions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.all-functions nav {
+  width: 30%;
+  background-color: #0160fe;
+  padding: 3em 0;
+}
+
+.all-functions .info {
+  background-color: #fff;
+  width: 70%;
+}
+
+.all-functions .info table {
+  width: 100%;
+}
+
+.all-functions .info table thead tr {
+  background-color: #fff !important;
+}
+
+.all-functions .info table thead tr th {
+  width: 19%;
+  padding: 1em;
+  text-align: center;
+}
+
+.all-functions .info table thead tr th:first-child {
+  width: 24%;
+  text-align: left;
+}
+
+.all-functions .info table thead tr th h5 {
+  font-weight: 700;
+  color: #0160fe;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.all-functions .info table tr:nth-child(odd) {
+  background-color: #f5f6f8;
+}
+
+.all-functions .info table tr td {
+  width: 19%;
+  padding: .75em 1em;
+  text-align: center;
+}
+
+.all-functions .info table tr td:first-child {
+  width: 24%;
+  text-align: left;
+  padding-left: 2em;
+}
+
+.all-functions .info table tr td:last-child {
+  padding-right: 3em;
+}
+
+.all-functions .info table tr td a {
+  color: #0160fe;
+  text-decoration: underline;
+}
+
+.all-functions .info table tr td img {
+  width: 1.5em;
 }
 
 .more {
