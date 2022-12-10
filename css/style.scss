@@ -2916,6 +2916,15 @@ footer {
         @media (max-width: 767px){
             margin-bottom: 0em;
         }
+        nav {
+            a {
+                transition: $transition;
+                &:hover, &:focus, &:active {
+                    color: $main-color;
+                    text-decoration: underline;
+                }
+            }
+        }
         h6 {
             a {
                 display: flex;
@@ -2924,17 +2933,8 @@ footer {
                 transition: $transition;
                 text-decoration: none !important;
                 &:hover, &:focus, &:active {
-                    color: $accent-color;
+                    color: $accent-color !important;
                     text-decoration: none !important;
-                }
-            }
-        }
-        nav {
-            a {
-                transition: $transition;
-                &:hover, &:focus, &:active {
-                    color: $main-color;
-                    text-decoration: underline;
                 }
             }
         }

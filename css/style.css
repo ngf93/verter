@@ -4373,6 +4373,16 @@ footer .f-menu {
   }
 }
 
+footer .f-menu nav a {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+footer .f-menu nav a:hover, footer .f-menu nav a:focus, footer .f-menu nav a:active {
+  color: #0160fe;
+  text-decoration: underline;
+}
+
 footer .f-menu h6 a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4387,18 +4397,8 @@ footer .f-menu h6 a {
 }
 
 footer .f-menu h6 a:hover, footer .f-menu h6 a:focus, footer .f-menu h6 a:active {
-  color: #0A4AB6;
+  color: #0A4AB6 !important;
   text-decoration: none !important;
-}
-
-footer .f-menu nav a {
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-}
-
-footer .f-menu nav a:hover, footer .f-menu nav a:focus, footer .f-menu nav a:active {
-  color: #0160fe;
-  text-decoration: underline;
 }
 
 footer .logo {
