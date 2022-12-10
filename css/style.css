@@ -4383,10 +4383,12 @@ footer .f-menu h6 a {
   color: #0160fe;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+  text-decoration: none !important;
 }
 
 footer .f-menu h6 a:hover, footer .f-menu h6 a:focus, footer .f-menu h6 a:active {
   color: #0A4AB6;
+  text-decoration: none !important;
 }
 
 footer .f-menu nav a {

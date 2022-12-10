@@ -2922,8 +2922,10 @@ footer {
                 align-items: center;
                 color: $main-color;
                 transition: $transition;
+                text-decoration: none !important;
                 &:hover, &:focus, &:active {
                     color: $accent-color;
+                    text-decoration: none !important;
                 }
             }
         }
