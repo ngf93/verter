@@ -2916,6 +2916,26 @@ footer {
         @media (max-width: 767px){
             margin-bottom: 0em;
         }
+        h6 {
+            a {
+                display: flex;
+                align-items: center;
+                color: $main-color;
+                transition: $transition;
+                &:hover, &:focus, &:active {
+                    color: $accent-color;
+                }
+            }
+        }
+        nav {
+            a {
+                transition: $transition;
+                &:hover, &:focus, &:active {
+                    color: $main-color;
+                    text-decoration: underline;
+                }
+            }
+        }
     }
     .logo {
         width: 60px;
@@ -2950,10 +2970,17 @@ footer {
         justify-content: flex-start;
     }
     span {white-space: nowrap;}
-    img {
+    img, svg {
         width: 1.8em;
         @media (max-width: 991px){
             width: 3em;
+        }
+    }
+    a {
+        color: $main-color;
+        transition: $transition;
+        &:hover, &:focus, &:active {
+            color: $accent-color;
         }
     }
 }

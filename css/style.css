@@ -4373,6 +4373,32 @@ footer .f-menu {
   }
 }
 
+footer .f-menu h6 a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #0160fe;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+footer .f-menu h6 a:hover, footer .f-menu h6 a:focus, footer .f-menu h6 a:active {
+  color: #0A4AB6;
+}
+
+footer .f-menu nav a {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+footer .f-menu nav a:hover, footer .f-menu nav a:focus, footer .f-menu nav a:active {
+  color: #0160fe;
+  text-decoration: underline;
+}
+
 footer .logo {
   width: 60px;
   height: 45px;
@@ -4432,14 +4458,24 @@ footer .icon {
   white-space: nowrap;
 }
 
-.social img {
+.social img, .social svg {
   width: 1.8em;
 }
 
 @media (max-width: 991px) {
-  .social img {
+  .social img, .social svg {
     width: 3em;
   }
+}
+
+.social a {
+  color: #0160fe;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.social a:hover, .social a:focus, .social a:active {
+  color: #0A4AB6;
 }
 
 #offcanvasMenu {
