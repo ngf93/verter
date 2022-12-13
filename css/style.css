@@ -1937,50 +1937,54 @@ main {
 .simple-table {
   width: 100%;
   --w: 990px;
-  --w-td-1: 25%;
+  --w-td-1: 100px;
   --offset: calc( (100% - var(--w))/2 + 1em);
   font-size: 0.9em;
 }
 @media (max-width: 1399px) {
   .simple-table {
     --w: 855px;
+    --w-td-1: 90px;
   }
 }
 @media (max-width: 1199px) {
   .simple-table {
     --w: 720px;
+    --w-td-1: 80px;
   }
 }
 @media (max-width: 991px) {
   .simple-table {
-    --w-td-1: 20%;
+    --w-td-1: 70px;
   }
 }
 @media (max-width: 767px) {
   .simple-table {
     --w: 540px;
+    --w-td-1: 60px;
   }
 }
 @media (max-width: 575px) {
   .simple-table {
     --offset: 1em;
-    --w-td-1: 26%;
-    font-size: 0.8em;
+    --w-td-1: 50px;
   }
+}
+.simple-table tr {
+  display: flex;
+  padding: 0 var(--offset);
 }
 .simple-table tr:nth-child(even) {
   background-color: #0052db;
 }
 .simple-table tr td {
-  box-sizing: border-box;
+  display: block;
   padding: 0.75em 1em;
+  flex: 1;
 }
 .simple-table tr td:first-child {
-  padding-left: var(--offset);
   width: var(--w-td-1);
-}
-.simple-table tr td:last-child {
-  padding-right: var(--offset);
+  flex: inherit;
 }
 
 .sec-blue {
