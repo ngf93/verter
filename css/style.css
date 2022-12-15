@@ -1573,7 +1573,7 @@ main {
 .sec-products .products-grid {
   list-style: none;
   padding: 0px;
-  --cell-height: 360px;
+  --cell-height: 400px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -1587,7 +1587,7 @@ main {
 
 @media (max-width: 1399px) {
   .sec-products .products-grid {
-    --cell-height: 320px;
+    --cell-height: 345px;
   }
 }
 
@@ -1742,6 +1742,13 @@ main {
   -o-object-position: right top;
      object-position: right top;
   z-index: 1;
+}
+
+@media (max-width: 575px) {
+  .sec-products .products-grid li figure .img {
+    -o-object-position: center top;
+       object-position: center top;
+  }
 }
 
 .sec-products .products-grid li figure figcaption {
