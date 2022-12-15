@@ -541,7 +541,7 @@ h6 {
     &-pagination {
         bottom: 1em;
         &-bullet {
-            border: 2px solid $main-color;
+            border: 3px solid $main-color;
             background-color: $main-color;
             width: .6em;
             height: .6em;
@@ -1056,6 +1056,12 @@ main {
                 filter: grayscale(0);
                 @include shadow();
             }
+        }
+        .swiper-button-prev {
+            right: 100%;
+        }
+        .swiper-button-next {
+            left: 100%;
         }
     }
 }
@@ -2396,6 +2402,7 @@ main {
     background-size: 100% auto;
     background-position: left top;
     .title {
+        display: none;
         position: absolute;
         z-index: 1;
         top: -.125em;
@@ -2540,11 +2547,11 @@ main {
 
 .sec-main-base {
     position: relative;
-    overflow: hidden;
     background: url(../imgs/bg/База-знаний.png) no-repeat;
     background-size: 100% auto;
     background-position: left top;
     .title {
+        display: none;
         position: absolute;
         z-index: 1;
         top: -15px;
@@ -2597,7 +2604,7 @@ main {
                     grid-column: span 1;
                 }
                 figure {
-                    border-radius: 1em;
+                    border-radius: 1.35em;
                     background-color: $main-color;
                     height: 320px;
                     display: flex;
@@ -2792,6 +2799,7 @@ main {
     background-size: 100% auto;
     background-position: left top;
     .title {
+        display: none;
         position: absolute;
         z-index: 1;
         top: -15px;

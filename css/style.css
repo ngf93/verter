@@ -740,7 +740,7 @@ h6 {
 }
 
 .swiper-pagination-bullet {
-  border: 2px solid #0160fe;
+  border: 3px solid #0160fe;
   background-color: #0160fe;
   width: .6em;
   height: .6em;
@@ -1538,6 +1538,14 @@ main {
           filter: grayscale(0);
   -webkit-box-shadow: 0px 3px 100px rgba(0, 59, 157, 0.21);
           box-shadow: 0px 3px 100px rgba(0, 59, 157, 0.21);
+}
+
+.sec-function-sliders .swiper-func .swiper-button-prev, .sec-function-sliders .swiper-func-3 .swiper-button-prev {
+  right: 100%;
+}
+
+.sec-function-sliders .swiper-func .swiper-button-next, .sec-function-sliders .swiper-func-3 .swiper-button-next {
+  left: 100%;
 }
 
 .sec-func-videos h5 {
@@ -3592,6 +3600,7 @@ main {
 }
 
 .sec-brands .title {
+  display: none;
   position: absolute;
   z-index: 1;
   top: -.125em;
@@ -3802,13 +3811,13 @@ main {
 
 .sec-main-base {
   position: relative;
-  overflow: hidden;
   background: url(../imgs/bg/База-знаний.png) no-repeat;
   background-size: 100% auto;
   background-position: left top;
 }
 
 .sec-main-base .title {
+  display: none;
   position: absolute;
   z-index: 1;
   top: -15px;
@@ -3898,7 +3907,7 @@ main {
 }
 
 .sec-main-base .container .main-base-grid div figure {
-  border-radius: 1em;
+  border-radius: 1.35em;
   background-color: #0160fe;
   height: 320px;
   display: -webkit-box;
@@ -4207,6 +4216,7 @@ main {
 }
 
 .sec-video .title {
+  display: none;
   position: absolute;
   z-index: 1;
   top: -15px;
