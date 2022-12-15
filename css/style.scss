@@ -2403,9 +2403,11 @@ main {
 .sec-brands {
     position: relative;
     padding: 5em 0;
-    background-color: $main-color;
     color: #fff;
     overflow: hidden;
+    background: url(../imgs/bg/доверие.png) no-repeat $main-color;
+    background-size: 100% auto;
+    background-position: left top;
     .title {
         position: absolute;
         z-index: 1;
@@ -2552,6 +2554,9 @@ main {
 .sec-main-base {
     position: relative;
     overflow: hidden;
+    background: url(../imgs/bg/База-знаний.png) no-repeat;
+    background-size: 100% auto;
+    background-position: left top;
     .title {
         position: absolute;
         z-index: 1;
@@ -2796,6 +2801,9 @@ main {
 .sec-video {
     position: relative;
     overflow: hidden;
+    background: url(../imgs/bg/Видео.png) no-repeat;
+    background-size: 100% auto;
+    background-position: left top;
     .title {
         position: absolute;
         z-index: 1;
