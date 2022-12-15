@@ -2348,25 +2348,9 @@ main {
 
 .sec-results {
     ul {
-        list-style: none;
-        padding-left: 0px;
-        column-count: 2;
-        gap: 3em;
         font-size: 1.2em;
-        @media (max-width: 991px){
-            gap: 2em;
-        }
-        @media (max-width: 767px){
-            column-count: 1;
-        }
         li {
             display: flex;
-            margin-bottom: 1em;
-            break-inside: avoid;
-            margin-bottom: 3em;
-            @media (max-width: 991px){
-                margin-bottom: 2em;
-            }
             img {
                 width: 4em;
                 height: 4em;

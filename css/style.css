@@ -3524,41 +3524,13 @@ main {
 }
 
 .sec-results ul {
-  list-style: none;
-  padding-left: 0px;
-  -webkit-column-count: 2;
-          column-count: 2;
-  gap: 3em;
   font-size: 1.2em;
-}
-
-@media (max-width: 991px) {
-  .sec-results ul {
-    gap: 2em;
-  }
-}
-
-@media (max-width: 767px) {
-  .sec-results ul {
-    -webkit-column-count: 1;
-            column-count: 1;
-  }
 }
 
 .sec-results ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 1em;
-  -webkit-column-break-inside: avoid;
-          break-inside: avoid;
-  margin-bottom: 3em;
-}
-
-@media (max-width: 991px) {
-  .sec-results ul li {
-    margin-bottom: 2em;
-  }
 }
 
 .sec-results ul li img {
