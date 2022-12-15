@@ -2336,6 +2336,9 @@ main {
         }
         .swiper-pagination {
             bottom: 2em;
+            width: fit-content;
+            left: 50%;
+            transform: translate(-50%);
             @media (max-width: 575px){
                 bottom: 0px;
             }
