@@ -23,6 +23,9 @@ const swiper2= new Swiper('.swiper-brands', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  autoplay: {
+    delay: 3000,
+  },
   breakpoints: {
     768: {
       slidesPerView: 4,

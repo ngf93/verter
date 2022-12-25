@@ -1262,7 +1262,7 @@ main {
         opacity: 0;
         transform: scale(.8);
         transition: 500ms ease-in;
-        transition-delay: 100ms;
+        transition-delay: 50ms;
         &.element-show {
             opacity: 1;
             transform: scale(1);
@@ -1280,9 +1280,9 @@ main {
     @for $i from 2 through 12 {
         li:nth-child(#{$i}) {
             .icon {
-                $time: 100ms*$i;
+                $time: 50ms*$i;
                 transition-delay: $time;
-              }
+            }
         }
     }
     @media (max-width: 767px){
@@ -2437,26 +2437,44 @@ main {
     padding: 5em 0;
     color: #fff;
     overflow: hidden;
-    background: url(../imgs/bg/доверие.png) no-repeat $main-color;
-    background-size: 100% auto;
-    background-position: left top;
+    background-color: $main-color;
+    // background: url(../imgs/bg/доверие.png) no-repeat $main-color;
+    // background-size: 100% auto;
+    // background-position: left top;
     .title {
-        display: none;
         position: absolute;
         z-index: 1;
-        top: -.125em;
-        left: 0px;
-        font-size: 22vw;
-        text-align: center;
-        font-weight: 700;
-        line-height: 100%;
-        color: $light-blue;
-        background-image: $gradient2;
-        background-size: 100%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
+        top: 0px;
+        left: 0%;
+        color: #e6e6e6;
+        width: 100%;
+        height: 500px;
+        object-fit: contain;
+        opacity: 0;
+        transform: scale(.75);
+        transition: all 500ms ease-in;
+        &.element-show {
+            opacity: 1;
+            transform: scale(1);
+        }
     }
+    // .title {
+    //     display: none;
+    //     position: absolute;
+    //     z-index: 1;
+    //     top: -.125em;
+    //     left: 0px;
+    //     font-size: 22vw;
+    //     text-align: center;
+    //     font-weight: 700;
+    //     line-height: 100%;
+    //     color: $light-blue;
+    //     background-image: $gradient2;
+    //     background-size: 100%;
+    //     background-clip: text;
+    //     -webkit-background-clip: text;
+    //     color: transparent;
+    // }
     .container {
         position: relative;
         z-index: 2;
@@ -2586,20 +2604,25 @@ main {
 
 .sec-main-base {
     position: relative;
-    background: url(../imgs/bg/База-знаний.png) no-repeat;
-    background-size: 100% auto;
-    background-position: left top;
+    // background: url(../imgs/bg/База-знаний.png) no-repeat;
+    // background-size: 100% auto;
+    // background-position: left top;
     .title {
-        display: none;
         position: absolute;
         z-index: 1;
-        top: -15px;
-        left: 0px;
-        font-size: 22vw;
-        text-align: left;
-        font-weight: 700;
-        line-height: 80%;
+        top: 0px;
+        left: 0%;
         color: #e6e6e6;
+        width: 100%;
+        height: 755px;
+        object-fit: contain;
+        opacity: 0;
+        transform: scale(.75);
+        transition: all 500ms ease-in;
+        &.element-show {
+            opacity: 1;
+            transform: scale(1);
+        }
     }
     .container {
         position: relative;
@@ -2840,20 +2863,22 @@ main {
 .sec-video {
     position: relative;
     overflow: hidden;
-    background: url(../imgs/bg/Видео.png) no-repeat;
-    background-size: 100% auto;
-    background-position: left top;
     .title {
-        display: none;
         position: absolute;
         z-index: 1;
-        top: -15px;
-        left: 0px;
-        font-size: 28vw;
-        text-align: left;
-        font-weight: 700;
-        line-height: 80%;
+        top: 0px;
+        left: 0%;
         color: #e6e6e6;
+        width: 100%;
+        height: 450px;
+        object-fit: contain;
+        opacity: 0;
+        transform: scale(.75);
+        transition: all 500ms ease-in;
+        &.element-show {
+            opacity: 1;
+            transform: scale(1);
+        }
     }
     .container {
         position: relative;
