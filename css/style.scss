@@ -978,7 +978,111 @@ main {
         }
     }
 }
-.sec-updates-head {
+.sec-docs {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    nav {
+        width: 27%;
+        background-color: #f5f6f8;
+        font-size: .8em;
+        padding: 2em 0;
+        ol {
+            padding-left: 0px;
+            list-style: none;
+            counter-reset: list1;
+            position: sticky;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            li {
+                &:not(:last-child){border-bottom: 1px solid #dcdfe5;}
+                position: relative;
+                &::before {
+                    counter-increment: list1;
+                    content: counter(list1) ".";
+                    position: absolute;
+                    top: 1em;
+                    left: 4em;
+                    transform: translateX(-115%);
+                    color: $main-color;
+                    font-weight: 500;
+                }
+                .group {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 1em 1em 1em 4em;
+                    a {
+                        color: $main-color;
+                        text-decoration: underline;
+                        font-weight: 500;
+                    }
+                }
+                button {
+                    width: 1em;
+                    height: 1em;
+                    background: url(../imgs/icons/chevron-down-blue.svg);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: contain;
+                    &[aria-expanded="true"] {
+                        background: url(../imgs/icons/chevron-up-blue.svg);
+                    }
+                }
+            }
+            ol { 
+                counter-reset: list2;
+                li::before {
+                    counter-increment: list2;
+                    content: counter(list1) "." counter(list2) ". ";
+                    left: 6em;
+                    font-weight: 400;
+                }
+                .group {
+                    padding-left: 6em;
+                    a {font-weight: 400;}
+                }
+                ol { 
+                    counter-reset: list3;
+                    li::before {
+                        counter-increment: list3;
+                        content: counter(list1) "." counter(list2) "." counter(list3) ". ";
+                        left: 8em;
+                    }
+                    .group {padding-left: 8em;}
+                }
+            }
+        }
+    }
+    &-area {
+        background-color: #fff;
+        width: 73%;
+        padding-top: 8em;
+        padding-bottom: 8em;
+        p {
+            font-size: 1.2em;
+            margin-bottom: 1.5em;
+        }
+        ol {
+            padding-left: 0px;
+            font-size: 1.2em;
+            li {
+                margin-bottom: 1.5em;
+                &::marker {
+                    color: $main-color;
+                    font-weight: bold;
+                }
+            }
+        }
+        img {margin-bottom: 1.5em;}
+        h5 {
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+    }
+}
+.sec-updates-head, .sec-docs-head {
     padding-top: 220px;
     height: 550px;
     position: relative;
@@ -1002,6 +1106,20 @@ main {
     }
     @media (max-width: 575px){
         padding-top: 80px;
+    }
+}
+.sec-docs-head {
+    h1 {text-align: center}
+    form {
+        @include flex-center();
+        align-items: stretch;
+        width: 80%;
+        margin: 0 auto;
+        input {
+            border-radius: 4px;
+            border: 2px solid #fff;
+            color: #fff;
+        }
     }
 }
 .sup-list {

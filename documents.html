@@ -5,23 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imgs/logo.svg">
-    <title>Verter - Техподдержка</title>
+    <title>Verter - Документация</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
     <link rel="stylesheet" href="fonts/stylesheet.css" />
 </head>
 <body>
-    <header>
+    <header class="inner">
         <div class="container-fluid h-100">
             <div class="d-flex align-items-center justify-content-between h-100">
-                <a href="index.html"><img src="imgs/logo.svg" alt="Verter" class="logo ms-4 ms-xl-5"></a>
+                <a href="index.html"><img src="imgs/logo-white.svg" alt="Verter" class="logo ms-4 ms-xl-5"></a>
                 <nav class="d-none d-lg-block">
                     <ul class="list-unstyled">
                         <li>
-                            <a href="showroom.html">Продукты</a>
+                            <a href="storage.html">Продукты</a>
                         </li>
-                        <li class="hover-menu" class="active">
+                        <li class="hover-menu">
                             <a href="support.html">Техподдержка</a>
                             <div class="sub-menu">
                                 <div>
@@ -52,96 +52,196 @@
     </header>
 
     <main>
-        <section class="sec-support container mb-8">
-            <ul class="list-unstyled justify-content-center row row-cols-sm-2 row-cols-lg-3 g-3 gx-md-4 gx-xxl-5 gy-md-4">
-                <li>
-                    <div class="box">
-                        <img src="imgs/img-16.png" alt="чат">
-                        <div>
-                            <h3>Написать в&nbsp;чат</h3>
-                            <p>На связи с вами 24/7</p>
-                        </div>
-                        <div>
-                            <a href="/" class="more">написать</a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="box">
-                        <img src="imgs/img-17.png" alt="техподдержки">
-                        <div>
-                            <h3>Служба техподдержки</h3>
-                        </div>
-                        <div>
-                            <a href="/" class="more">отправить</a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="box">
-                        <img src="imgs/img-18.png" alt="Справка">
-                        <div>
-                            <h3>Справка <br/>по продуктам</h3>
-                            <p>F.A.Q.</p>
-                        </div>
-                        <div>
-                            <a href="/" class="more">подробнее</a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <section class="container mb-8">
-            <div class="row justify-content-center">
-                <div class="col-12 col-lg-11 col-xl-10">
-                    <h2>Инструменты <br/>диагностики и помощи</h2>
-                    <ul class="list-unstyled sup-list">
-                        <li>
-                            <img src="imgs/icons/icon-3.png" alt="Диагностика продуктов Verter">
-                            <p>Диагностика продуктов Verter</p>
-                        </li>
-                        <li>
-                            <img src="imgs/icons/icon-4.png" alt="Удаленное подключение">
-                            <p>Удаленное подключение</p>
-                        </li>
-                        <li>
-                            <img src="imgs/icons/icon-5.png" alt="Статус обращения">
-                            <p>Статус обращения</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="sec-callback">
+        <section class="sec-docs-head">
+            <img src="imgs/bg/bg-7.jpg" alt="Документация" class="bg">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-12 col-lg-10 col-xl-9 col-xxl-8 offset-lg-1">
-                        <div class="row row-cols-md-2 gx-4 gx-lg-5">
-                            <div>
-                                <h2>Оставить заявку на тести-рование</h2>
-                                <p>
-                                    Наш менеджер свяжется с вами, 
-                                    <br/>и расскажет о функционале 
-                                    <br/>адресный склад все или о все вариантах 
-                                    <br/>и возможностях и интеграции
-                                </p>
-                            </div>
-                            <div>
-                                <form action="">
-                                    <input class="mb-3" type="text" placeholder="Как к вам обращаться">
-                                    <input class="mb-3" type="email" placeholder="Электронная почта">
-                                    <input class="mb-5" type="tel" placeholder="Телефон">
-                                    <button type="submit" class="btn-1 mx-auto">отправить</button>
-                                    <p class="fs-07 faded text-center mt-4">Я согласен на обработку персональных данных и получение информационных сообщений</p>
-                                </form>
-                            </div>
-                        </div>
+                    <div class="col-12 col-xl-9">
+                        <h1><strong>Verter.Склад</strong> Документация</h1>
+                        <form action="">
+                            <input type="search" placeholder="Поиск">
+                            <button type="button" class="btn-1 ms-4">Найти</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="sec-docs">
+            <nav>
+                <ol>
+                    <li>
+                        <div class="group">  
+                            <a href="/">Новое в модуле</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group">
+                            <a href="/">Отличия от модуля Стандарт</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group">
+                            <a href="/">О модуле Диадок</a>
+                            <button type="button" data-bs-toggle="collapse" data-bs-target="#list-1" aria-expanded="false"></button>
+                        </div>
+                        <ol class="collapse" id="list-1">
+                            <li>
+                                <div class="group">
+                                    <a href="/">Совместимость</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="group">
+                                    <a href="/">Аппаратные требования</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="group">
+                                    <a href="/">Технические требования</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="group">
+                                    <a href="/">Права пользователя 1С</a>
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <div class="group">
+                            <a href="/">Запуск модуля</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group">
+                            <a href="/">Обновление модуля</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group">
+                            <a href="/">Настройка</a>
+                            <button type="button" data-bs-toggle="collapse" data-bs-target="#list-2" aria-expanded="false"></button>
+                        </div>
+                        <ol class="collapse" id="list-2">
+                            <li>
+                                <div class="group">
+                                    <a href="/">Настройка организации</a>
+                                    <button type="button" data-bs-toggle="collapse" data-bs-target="#list-3" aria-expanded="false"></button>
+                                </div>
+                                <ol class="collapse" id="list-3">
+                                    <li>
+                                        <div class="group">
+                                            <a href="/">Сопоставление своих организаций, подразделений</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="group">
+                                            <a href="/">Настройка документов</a>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <div class="group">
+                                    <a href="/">Настройка контрагентов</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="group">
+                                    <a href="/">Расширенные настройка</a>
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <div class="group">
+                            <a href="/">Главное окно</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group">
+                            <a href="/">Работа с контрагентами</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group">
+                            <a href="/">Работа с документами</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group">
+                            <a href="/">Работа с маркировкой товара</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group">
+                            <a href="/">Прослеживаемость товаров</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group">
+                            <a href="/">Работа с машиночитаемыми доверенностями</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group">
+                            <a href="/">Разработчику</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="group">
+                            <a href="/">Вопросы-Ответы</a>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+            <section class="sec-docs-area">
+                <div class="container mb-5">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-10 col-xl-9 col-xxl-8">
+                            <p><strong class="main-color">Пример:</strong> Наш поставщик (ООО "Производитель обуви") отправил нам автомобиль с партией обуви, а также отразил факт продажи в своём личном кабинете Честного знака</p>
+        
+                            <h5>Условно, процесс приёмки маркированного товара состоит из следующих этапов:</h5>
+        
+                            <ol>
+                                <li>Получение из личного кабинета Честного Знака информации о поступлении с кодами маркировки</li>
+                                <li>Создание в 1С документа приобретения и отправка задания на склад о необходимости провести фактическую приёмку</li>
+                                <li>Склад, получив задание с помощью Терминала Сбора Данных (ТСД) осуществляет приёмку</li>
+                                <li>Начальник склада, получив событие о том, что приёмка осуществлена, создаёт приходный ордер, тем самым подтверждая приёмку</li>
+                                <li>Специалист, отвечающий за взаимодействие с Честным знаком получает информацию, что товар принят и отправляет в Честный знак подтверждение о приёмке</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="sec-func-videos container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-10 col-xl-9">
+                            <h3 class="fw-7">Пройдемся по основным этапам приемки товара с маркировкой</h3>
+                        </div>
+                        <div class="col-12 col-lg-10 col-xl-9 col-xxl-8">
+                            <h5><span class="main-color">Шаг 1.</span> Загрузка из ЛК Честного знака актуальных поступлений</h5>
+                            <iframe width="100%" height="320" src="https://www.youtube.com/embed/W9nZ6u15yis" title="Black Screen 10 seconds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+                            <h5><span class="main-color">Шаг 2.</span> Отправка на ТСД задания о необходимости приёмки товара</h5>
+                            <iframe width="100%" height="320" src="https://www.youtube.com/embed/W9nZ6u15yis" title="Black Screen 10 seconds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+                            <h5><span class="main-color">Шаг 3.</span> Приёмка товара с маркировкой с использованием ТСД</h5>
+                            <iframe width="100%" height="320" src="https://www.youtube.com/embed/W9nZ6u15yis" title="Black Screen 10 seconds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+                            <h5><span class="main-color">Шаг 4.</span> Получение результатов с ТСД о фактической приёмки</h5>
+                            <iframe width="100%" height="320" src="https://www.youtube.com/embed/W9nZ6u15yis" title="Black Screen 10 seconds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+                            <h5><span class="main-color">Шаг 5.</span> Отправка в ЛК Честного знака подтверждения о приёмке маркированного товара</h5>
+                            <iframe width="100%" height="320" src="https://www.youtube.com/embed/W9nZ6u15yis" title="Black Screen 10 seconds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>
+
+        
 
         <section class="sec-working-days py-4 py-md-5 mb-5">
             <div class="container">
