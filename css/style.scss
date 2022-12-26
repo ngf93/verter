@@ -445,6 +445,28 @@ h6 {
     }
 }
 
+.tooltip {
+    font-size: 19px;
+    max-width: 400px;
+    width: 400px; 
+    &-arrow {
+        color: $main-color;
+    }
+    &-inner {
+        background-color: $main-color;
+        color: #fff;
+        box-shadow: 0px 0.75em 1.5em rgba($color: #000, $alpha: .25);
+        font-size: .9em;
+        word-wrap: normal;
+        text-align: left;
+        padding: 1em;
+        max-width: 400px;
+        width: 400px; 
+        p {font-size: .9em;}
+    }
+}
+
+
 .accordion {
     --bs-accordion-color: #fff;
     --bs-accordion-bg: #0052db;
@@ -478,7 +500,6 @@ h6 {
         }
     }
 }
-
 
 .swiper {
     &-1, &-brands, &-reviews, &-gallery {
@@ -3211,6 +3232,7 @@ main {
     display: flex;
     align-items: stretch;
     justify-content: flex-start;
+    overflow: hidden;
     nav {
         width: 30%;
         background-color: $main-color;
