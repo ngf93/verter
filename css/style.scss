@@ -1778,7 +1778,7 @@ main {
         font-size: 10vw;
         font-weight: bold;
         text-align: center;
-        line-height: .73em;
+        line-height: 5.6vw;
         margin-bottom: 0px;
         margin-top: 1rem;
         color: $color-bg;
@@ -2538,6 +2538,11 @@ main {
         font-weight: 500;
         text-decoration: underline;
         line-height: 100%;
+        color: #000;
+        transition: $transition;
+        &:hover, &:focus, &:active {
+            color: $main-color;
+        }
         @media (max-width: 575px){
             bottom: 1.5em;
         }
@@ -2588,6 +2593,11 @@ main {
         .more {
             font-weight: 500;
             text-decoration: underline;
+            color: #000;
+            transition: $transition;
+            &:hover, &:focus, &:active {
+                color: $main-color;
+            }
         }
     }
 }
@@ -3183,7 +3193,7 @@ main {
             .webinar-card {
                 background-color: $main-color;
                 color: #fff;
-                border-radius: 1em;
+                border-radius: 1.35em;
                 overflow: hidden;
                 padding: 1.5em;
                 height: 410px;
