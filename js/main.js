@@ -30,6 +30,24 @@ function toggleList(btn) {
   }
 }
 
+const listTable = document.querySelector('.list-table')
+if (typeof(listTable) != 'undefined' && listTable != null){
+  const btns = listTable.querySelectorAll('button');
+  const btnsArr = Array.from(btns);
+  btnsArr.forEach(item => {
+    const parent = item.parentElement;
+    const list = parent.nextElementSibling;
+    if (typeof(list) != 'undefined' && list != null && list.classList.contains('listOL')){
+      item.classList.add('toggle');
+      list.classList.add('d-none');
+      item.addEventListener('click', (event) => {
+        list.classList.toggle('d-none');
+        item.classList.add('minus');
+      })
+    }
+  })
+}
+
 const hoverDivs = document.getElementsByClassName('hover-effect')
 if (hoverDivs){
   const Arr = Array.from(hoverDivs)

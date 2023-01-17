@@ -1810,6 +1810,140 @@ main {
         }
     }
 }
+
+.list-table {
+    overflow: hidden;
+    @include safariFix();
+    &-body {
+        --td-last: 280px;
+        --li-pad: 1em;
+        padding: 0 calc((100% - var(--w))/2) 0 5%;
+        font-size: .9em;
+        font-weight: 600;
+        @media (max-width: 1399px){
+            --td-last: 240px;
+        }
+        @media (max-width: 1199px){
+            --td-last: 210px;
+            padding: 0 1em;
+        }
+        @media (max-width: 991px){
+            --td-last: 150px;
+        }
+        @media (max-width: 767px){
+            --td-last: 120px;
+        }
+        @media (max-width: 575px){
+            --td-last: 20%;
+        }
+        ol {
+            padding-left: 0px;
+            list-style-type: none;
+            counter-reset: item;
+            li {
+                display: block;
+                position: relative;
+                padding-left: 2em;
+                &:nth-child(odd){
+                    &>.list-row {
+                        position: relative;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            width: 100%;
+                            height: 100%;
+                            z-index: -2;
+                            transform: scaleX(500%);
+                            transform-origin: 50% 50%;
+                            background-color: #0052db;
+                        }
+                    }
+                }
+                &::before {
+                    counter-increment: item;
+                    content: counters(item,".") ". "; 
+                    position: absolute;
+                    top: .75em;
+                    left: 0px;
+                    z-index: 2;
+                }
+                ol {
+                    li {
+                        &::before {left: -2em;}
+                        ol {
+                            li {
+                                &::before {left: -4em;}
+                            }
+                        }
+                    }
+                }
+                
+                .list-row {
+                    display: flex;
+                    padding: 0.75em 0;
+                    button {
+                        flex: 1;
+                        text-align: left;
+                        font-weight: 600;
+                        &.toggle {
+                            padding-left: 2em;
+                            background: url(../imgs/icons/plus-white.svg) no-repeat left;
+                            background-size: 1.5em;
+                            &.minus {
+                                background: url(../imgs/icons/minus-white.svg) no-repeat left;
+                                background-size: 1.5em;
+                            }
+                        }
+                    }
+                    &>div {
+                        width: var(--td-last);
+                        text-align: center;
+                        padding: 0 .5em;
+                        position: relative;
+                        &>*{z-index: 10;}
+                        &:hover {
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 0px;
+                                left: 0px;
+                                width: 100%;
+                                height: 100%;
+                                transform: scaleY(10000%);
+                                transform-origin: 50% 50%;
+                                background-color: rgba($color: #fff, $alpha: .15);
+                                z-index: -1;
+                            }
+                        }
+                    }
+                    img {
+                        width: 1.5em;
+                        height: 1.5em;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+    &-top {
+        @extend .list-table-body;
+        ol {
+            li {
+                &::before {
+                    content: unset;
+                }
+                &:nth-child(odd){
+                    &>.list-row {
+                        &::after { content: unset;}
+                    }
+                }
+            }
+        }
+    }
+}
+
 .table-grid {
     @media (max-width: 991px){
         font-size: 12px;
